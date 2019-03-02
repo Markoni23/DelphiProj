@@ -1,0 +1,201 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = #1058#1077#1082#1091#1097#1080#1081' '#1079#1072#1082#1072#1079
+  ClientHeight = 480
+  ClientWidth = 349
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormCreate
+  DesignerMasterStyle = 3
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Text = #1051#1086#1075#1080#1085
+    TabOrder = 2
+  end
+  object DriverNameEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Text = #1040#1089#1083#1072#1085#1073#1077#1082
+    Position.X = 64.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button1: TButton
+    ModalResult = 1
+    Position.X = 280.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = #1042#1086#1081#1090#1080
+    OnClick = Button1Click
+  end
+  object Panel1: TPanel
+    Position.Y = 32.000000000000000000
+    Size.Width = 369.000000000000000000
+    Size.Height = 457.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object ComboBox1: TComboBox
+      Items.Strings = (
+        #1043#1086#1090#1086#1074)
+      Position.Y = 8.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object ComboBox2: TComboBox
+      Enabled = False
+      Position.Y = 192.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.Y = 256.000000000000000000
+      Enabled = False
+      Size.Width = 353.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label2: TLabel
+      StyledSettings = [Family, FontColor]
+      Position.X = 64.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = #1058#1077#1082#1091#1097#1080#1081' '#1079#1072#1082#1072#1079
+      TabOrder = 3
+    end
+    object Label3: TLabel
+      Position.Y = 232.000000000000000000
+      Text = #1040#1076#1088#1077#1089
+      TabOrder = 4
+    end
+    object Label4: TLabel
+      Position.Y = 296.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = #1054#1089#1086#1073#1099#1077' '#1090#1088#1077#1073#1086#1074#1072#1085#1080#1103
+      TabOrder = 5
+    end
+    object Label5: TLabel
+      Position.Y = 168.000000000000000000
+      Text = #1057#1090#1072#1090#1091#1089
+      TabOrder = 6
+    end
+    object Label6: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 136.000000000000000000
+      Position.Y = 120.000000000000000000
+      Size.Width = 82.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 32.000000000000000000
+      Text = '00:00'
+      TabOrder = 7
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Position.Y = 296.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 161.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Viewport.Width = 345.000000000000000000
+      Viewport.Height = 153.000000000000000000
+    end
+    object DurationTimer: TTimer
+      OnTimer = DurationTimerTimer
+      Left = 232
+      Top = 152
+    end
+  end
+  object UpdateInfoTimer: TTimer
+    Left = 200
+    Top = 208
+  end
+  object ServerConnection: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'DriverName=DataSnap'
+      'HostName=localhost'
+      'port=212'
+      'Filters={}')
+    Connected = True
+    Left = 8
+    Top = 72
+  end
+  object DSProviderConnection1: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ServerConnection
+    Left = 8
+    Top = 120
+  end
+  object DriverStatusCDS: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DriverStatusDSP'
+    RemoteServer = DSProviderConnection1
+    Left = 144
+    Top = 72
+    object DriverStatusCDSid: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object DriverStatusCDSname: TWideStringField
+      FieldName = 'name'
+      Origin = 'name'
+      Size = 50
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DriverStatusCDS
+    ScopeMappings = <>
+    Left = 160
+    Top = 208
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ComboBox1
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'name'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

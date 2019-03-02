@@ -1,0 +1,104 @@
+unit SDIMAIN;
+
+interface
+
+uses Winapi.Windows, System.Classes, Vcl.Graphics, Vcl.Forms, Vcl.Controls,
+  Vcl.Menus, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.ComCtrls,
+  Vcl.ImgList, Vcl.StdActns, Vcl.ActnList, Vcl.ToolWin, System.ImageList,
+  System.Actions, Vcl.Grids, Vcl.WinXCtrls, Data.DBXDataSnap, Data.DBXCommon,
+  IPPeerClient, Data.DB, Datasnap.DBClient, Datasnap.DSConnect, Data.SqlExpr,
+  Vcl.DBGrids, Vcl.WinXCalendars, System.Rtti, System.Bindings.Outputs,
+  Vcl.Bind.Editors, Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.Bind.Components,
+  Data.Bind.DBScope, Vcl.ButtonGroup;
+
+type
+  TSDIAppForm = class(TForm)
+    RideLabel: TLabel;
+    DriverLabel: TLabel;
+    DetailsPanel: TPanel;
+    OrderPages: TPageControl;
+    CurrentOrders: TTabSheet;
+    OrderArcive: TTabSheet;
+    ServerConnection: TSQLConnection;
+    DSProviderConnection: TDSProviderConnection;
+    DriverDBGrid: TDBGrid;
+    RideArchiveCDS: TClientDataSet;
+    RideDS: TDataSource;
+    RideArchiveDS: TDataSource;
+    RideDBGrid: TDBGrid;
+    DriversPanel: TPanel;
+    RidePanel: TPanel;
+    DetailsLabel: TLabel;
+    Label2: TLabel;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    IdEdit: TEdit;
+    RideStatusComboBox: TComboBox;
+    OrderDatetime: TDateTimePicker;
+    RequireDescription: TMemo;
+    DriverComboBox: TComboBox;
+    BindingsList1: TBindingsList;
+    Label6: TLabel;
+    AddressEdit: TEdit;
+    RideStatusCDS: TClientDataSet;
+    DriverDS: TDataSource;
+    RideCDS: TClientDataSet;
+    DriverCDS: TClientDataSet;
+    DriverCDSid: TIntegerField;
+    DriverCDSname: TWideStringField;
+    DriverCDSstatus_id: TIntegerField;
+    DriverCDSstatus_name: TWideStringField;
+    DriverStatusCDS: TClientDataSet;
+    BindSourceDB1: TBindSourceDB;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
+    LinkFillControlToField1: TLinkFillControlToField;
+    RideCDSid: TIntegerField;
+    RideCDSdriver_id: TIntegerField;
+    RideCDSstatus_id: TIntegerField;
+    RideCDSrequirement: TWideStringField;
+    RideCDScreate_dtm: TSQLTimeStampField;
+    RideCDSaddress: TWideStringField;
+    RideCDSdriver_name: TWideStringField;
+    RideCDSstatus_name: TWideStringField;
+    RideStatusCDSid: TIntegerField;
+    RideStatusCDSname: TWideStringField;
+    BindSourceDB2: TBindSourceDB;
+    LinkFillControlToField2: TLinkFillControlToField;
+    ButtonGroup1: TButtonGroup;
+    ButtonImageList: TImageList;
+    BindSourceDB3: TBindSourceDB;
+    procedure RefreshTimerTimer(Sender: TObject);
+    procedure ButtonGroup1Items1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SDIAppForm: TSDIAppForm;
+
+implementation
+
+uses About, ClientModuleUnit;
+
+{$R *.dfm}
+
+procedure TSDIAppForm.ButtonGroup1Items1Click(Sender: TObject);
+begin
+  RideCDS.Delete;
+end;
+
+procedure TSDIAppForm.RefreshTimerTimer(Sender: TObject);
+begin
+  RideCDS.Refresh;
+  DriverCDS.Refresh;
+  RideArchiveCDS.Refresh;
+end;
+
+end.
