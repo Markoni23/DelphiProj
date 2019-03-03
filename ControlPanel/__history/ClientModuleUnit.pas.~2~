@@ -1,0 +1,41 @@
+unit ClientModuleUnit;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, ClientClassesUnit, Data.DBXDataSnap,
+  Data.DBXCommon, IPPeerClient, Data.DB, Data.SqlExpr;
+
+type
+  TClientModule2 = class(TDataModule)
+    SQLConnection1: TSQLConnection;
+  private
+    FInstanceOwner: Boolean;
+    { Private declarations }
+  public
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+    property InstanceOwner: Boolean read FInstanceOwner write FInstanceOwner;
+end;
+
+var
+  ClientModule2: TClientModule2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+constructor TClientModule2.Create(AOwner: TComponent);
+begin
+  inherited;
+  FInstanceOwner := True;
+end;
+
+destructor TClientModule2.Destroy;
+begin
+  inherited;
+end;
+
+end.

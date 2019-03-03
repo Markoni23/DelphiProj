@@ -1,0 +1,19 @@
+program ControlPanel;
+
+uses
+  Forms,
+  SDIMAIN in 'SDIMAIN.PAS' {SDIAppForm},
+  ABOUT in 'ABOUT.PAS' {AboutBox},
+  ClientClassesUnit1 in 'ClientClassesUnit1.pas',
+  ClientModuleUnit in 'ClientModuleUnit.pas' {ClientModule1: TDataModule};
+
+{$R *.RES}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TSDIAppForm, SDIAppForm);
+  Application.CreateForm(TAboutBox, AboutBox);
+  Application.CreateForm(TClientModule1, ClientModule1);
+  Application.Run;
+end.
+ 

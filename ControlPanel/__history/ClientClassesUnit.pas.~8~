@@ -1,0 +1,55 @@
+//
+// Created by the DataSnap proxy generator.
+// 26.12.2018 10:13:37
+//
+
+unit ClientClassesUnit;
+
+interface
+
+uses System.JSON, Data.DBXCommon, Data.DBXClient, Data.DBXDataSnap, Data.DBXJSON, Datasnap.DSProxy, System.Classes, System.SysUtils, Data.DB, Data.SqlExpr, Data.DBXDBReaders, Data.DBXCDSReaders, Data.DBXJSONReflect;
+
+type
+  TDSServerModule1Client = class(TDSAdminClient)
+  private
+    FMoveRideToArchiveCommand: TDBXCommand;
+  public
+    constructor Create(ADBXConnection: TDBXConnection); overload;
+    constructor Create(ADBXConnection: TDBXConnection; AInstanceOwner: Boolean); overload;
+    destructor Destroy; override;
+    procedure MoveRideToArchive(RideId: Integer);
+  end;
+
+implementation
+
+procedure TDSServerModule1Client.MoveRideToArchive(RideId: Integer);
+begin
+  if FMoveRideToArchiveCommand = nil then
+  begin
+    FMoveRideToArchiveCommand := FDBXConnection.CreateCommand;
+    FMoveRideToArchiveCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FMoveRideToArchiveCommand.Text := 'TDSServerModule1.MoveRideToArchive';
+    FMoveRideToArchiveCommand.Prepare;
+  end;
+  FMoveRideToArchiveCommand.Parameters[0].Value.SetInt32(RideId);
+  FMoveRideToArchiveCommand.ExecuteUpdate;
+end;
+
+constructor TDSServerModule1Client.Create(ADBXConnection: TDBXConnection);
+begin
+  inherited Create(ADBXConnection);
+end;
+
+constructor TDSServerModule1Client.Create(ADBXConnection: TDBXConnection; AInstanceOwner: Boolean);
+begin
+  inherited Create(ADBXConnection, AInstanceOwner);
+end;
+
+destructor TDSServerModule1Client.Destroy;
+begin
+  FMoveRideToArchiveCommand.DisposeOf;
+  inherited;
+end;
+
+end.
+
