@@ -1,0 +1,24 @@
+unit Server;
+
+interface
+
+uses Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs;
+
+type
+  TForm3 = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.fmx}
+
+end.
+

@@ -1,0 +1,6 @@
+inherited Form4_NmXhdpiPh: TForm4_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+end

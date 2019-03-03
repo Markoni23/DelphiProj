@@ -1,0 +1,12 @@
+object ServerMethods1: TServerMethods1
+  OldCreateOrder = False
+  Height = 260
+  Width = 265
+  object PgtaxiConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=PGTaxi')
+    LoginPrompt = False
+    Left = 121
+    Top = 102
+  end
+end

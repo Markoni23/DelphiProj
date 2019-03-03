@@ -1,0 +1,48 @@
+object DSServerModule1: TDSServerModule1
+  OldCreateOrder = False
+  Height = 423
+  Width = 473
+  object PgtaxiConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=PGTaxi')
+    LoginPrompt = False
+    Left = 162
+    Top = 191
+  end
+  object DriverTable: TFDQuery
+    Connection = PgtaxiConnection
+    SQL.Strings = (
+      'SELECT * FROM "tDriver"')
+    Left = 258
+    Top = 127
+  end
+  object RideTable: TFDQuery
+    Connection = PgtaxiConnection
+    SQL.Strings = (
+      'SELECT * FROM "tRide"')
+    Left = 258
+    Top = 186
+  end
+  object RideArchiveTable: TFDQuery
+    Connection = PgtaxiConnection
+    SQL.Strings = (
+      'SELECT * FROM "tRideArchive"')
+    Left = 256
+    Top = 242
+  end
+  object DriverDSP: TDataSetProvider
+    DataSet = DriverTable
+    Left = 352
+    Top = 128
+  end
+  object RideDSP: TDataSetProvider
+    DataSet = RideTable
+    Left = 352
+    Top = 184
+  end
+  object RideArchiveDSP: TDataSetProvider
+    DataSet = RideArchiveTable
+    Left = 352
+    Top = 240
+  end
+end

@@ -1,0 +1,219 @@
+unit MAIN;
+
+interface
+
+uses Winapi.Windows, System.Classes, Vcl.Graphics, Vcl.Forms, Vcl.Controls,
+  Vcl.Menus, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.ComCtrls,
+  Vcl.ImgList, Vcl.StdActns, Vcl.ActnList, Vcl.ToolWin, System.ImageList,
+  System.Actions, Vcl.Grids, Vcl.WinXCtrls, Data.DBXDataSnap, Data.DBXCommon,
+  IPPeerClient, Data.DB, Datasnap.DBClient, Datasnap.DSConnect, Data.SqlExpr,
+  Vcl.DBGrids, Vcl.WinXCalendars, System.Rtti, System.Bindings.Outputs,
+  Vcl.Bind.Editors, Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.Bind.Components,
+  Data.Bind.DBScope, Vcl.ButtonGroup, System.SysUtils, System.Variants;
+
+type
+  TSDIAppForm = class(TForm)
+    DriverLabel: TLabel;
+    DetailsPanel: TPanel;
+    OrderPages: TPageControl;
+    CurrentOrders: TTabSheet;
+    OrderArcive: TTabSheet;
+    ServerConnection: TSQLConnection;
+    DSProviderConnection: TDSProviderConnection;
+    DriverDBGrid: TDBGrid;
+    RideArchiveCDS: TClientDataSet;
+    RideDS: TDataSource;
+    RideArchiveDS: TDataSource;
+    DriversPanel: TPanel;
+    DetailsLabel: TLabel;
+    Label2: TLabel;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    IdEdit: TEdit;
+    RideStatusComboBox: TComboBox;
+    OrderDatetime: TDateTimePicker;
+    RequireDescription: TMemo;
+    DriverComboBox: TComboBox;
+    BindingsList1: TBindingsList;
+    Label6: TLabel;
+    AddressEdit: TEdit;
+    RideStatusCDS: TClientDataSet;
+    DriverDS: TDataSource;
+    RideCDS: TClientDataSet;
+    DriverCDS: TClientDataSet;
+    DriverCDSid: TIntegerField;
+    DriverCDSname: TWideStringField;
+    DriverCDSstatus_id: TIntegerField;
+    DriverCDSstatus_name: TWideStringField;
+    DriverStatusCDS: TClientDataSet;
+    BindSourceDB1: TBindSourceDB;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
+    LinkFillControlToField1: TLinkFillControlToField;
+    RideCDSid: TIntegerField;
+    RideCDSdriver_id: TIntegerField;
+    RideCDSstatus_id: TIntegerField;
+    RideCDSrequirement: TWideStringField;
+    RideCDScreate_dtm: TSQLTimeStampField;
+    RideCDSaddress: TWideStringField;
+    RideCDSdriver_name: TWideStringField;
+    RideCDSstatus_name: TWideStringField;
+    RideStatusCDSid: TIntegerField;
+    RideStatusCDSname: TWideStringField;
+    BindSourceDB2: TBindSourceDB;
+    LinkFillControlToField2: TLinkFillControlToField;
+    ButtonImageList: TImageList;
+    BindSourceDB3: TBindSourceDB;
+    Button1: TButton;
+    RidePanel: TPanel;
+    RideLabel: TLabel;
+    RideDBGrid: TDBGrid;
+    ButtonGroup1: TButtonGroup;
+    BindSourceDB4: TBindSourceDB;
+    RideArchiveCDSid: TIntegerField;
+    RideArchiveCDSdriver_id: TIntegerField;
+    RideArchiveCDScreate_dtm: TSQLTimeStampField;
+    RideArchiveCDSclose_dtm: TSQLTimeStampField;
+    RideArchiveCDSrequirement: TWideStringField;
+    RideArchiveCDSaddress: TWideStringField;
+    RideArchiveCDSdriver_name: TWideStringField;
+    LinkFillControlToField3: TLinkFillControlToField;
+    Button2: TButton;
+    ActiveDriverCDS: TClientDataSet;
+    IntegerField1: TIntegerField;
+    WideStringField1: TWideStringField;
+    IntegerField2: TIntegerField;
+    WideStringField2: TWideStringField;
+    ActiveDriverDS: TDataSource;
+    BindSourceDB5: TBindSourceDB;
+    CheckBox1: TCheckBox;
+    Panel1: TPanel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label13: TLabel;
+    Label12: TLabel;
+    Memo1: TMemo;
+    Edit1: TEdit;
+    DateTimePicker1: TDateTimePicker;
+    ComboBox2: TComboBox;
+    Edit2: TEdit;
+    DateTimePicker2: TDateTimePicker;
+    Splitter1: TSplitter;
+    Panel2: TPanel;
+    Label14: TLabel;
+    DBGrid1: TDBGrid;
+    LinkControlToField10: TLinkControlToField;
+    LinkControlToField11: TLinkControlToField;
+    LinkFillControlToField4: TLinkFillControlToField;
+    LinkControlToField12: TLinkControlToField;
+    LinkControlToField13: TLinkControlToField;
+    LinkControlToField14: TLinkControlToField;
+    Splitter2: TSplitter;
+    Splitter3: TSplitter;
+    GridsPanel: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    procedure RefreshTimerTimer(Sender: TObject);
+    procedure ButtonGroup1Items1Click(Sender: TObject);
+    procedure ButtonGroup1Items0Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure AddressEditChange(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure CheckBox1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SDIAppForm: TSDIAppForm;
+
+implementation
+
+uses About, ClientModuleUnit, CreateOrderForm;
+
+{$R *.dfm}
+
+procedure TSDIAppForm.AddressEditChange(Sender: TObject);
+var DriverId, StatusId : integer;
+begin
+    if not VarIsNull(RideCDS.FieldByName('driver_id').Value) then
+      DriverId := StrToInt(RideCDS.FieldByName('driver_id').Value)
+    else
+      DriverId := -1;
+
+    if not VarIsNull(RideCDS.FieldByName('status_id').Value) then
+      StatusId := StrToInt(RideCDS.FieldByName('status_id').Value)
+    else
+      StatusId := -1;
+
+    ClientModule1.DSServerModule1Client.UpdateRide(strtoint(IdEdit.Text),
+      DriverId,
+      StatusId,
+      RequireDescription.Text,
+      AddressEdit.Text);
+
+    RefreshTimerTimer(nil);
+end;
+
+procedure TSDIAppForm.ButtonGroup1Items0Click(Sender: TObject);
+begin
+  if CreateOrderForm.Form2.ShowModal = mrOk then
+  begin
+    ClientModule1.DSServerModule1Client.CreateNewRide(CreateOrderForm.Form2.AddressEdit.Text, CreateOrderForm.Form2.RequirementMemo.Text);
+    RefreshTimerTimer(nil);
+  end;
+end;
+
+procedure TSDIAppForm.ButtonGroup1Items1Click(Sender: TObject);
+begin
+  RideCDS.Delete;
+  ClientModule1.DSServerModule1Client.MoveRideToArchive(StrToInt(RideCDS.FieldByName('id').Value));
+end;
+
+procedure TSDIAppForm.CheckBox1Click(Sender: TObject);
+begin
+  if CheckBox1.Checked then
+  begin
+    DriverDBGrid.DataSource := ActiveDriverDS;
+  end
+  else
+  begin
+    DriverDBGrid.DataSource := DriverDS;
+  end;
+  RefreshTimerTimer(nil);
+end;
+
+procedure TSDIAppForm.FormActivate(Sender: TObject);
+begin
+  ActiveDriverCDS.Filter := 'status_id = 1';
+  ActiveDriverCDS.Filtered := true;
+  CheckBox1.Checked := true;
+  DriverDBGrid.DataSource := ActiveDriverDS;
+end;
+
+procedure TSDIAppForm.FormCreate(Sender: TObject);
+begin
+  DriverComboBox.Text := '';
+end;
+
+procedure TSDIAppForm.RefreshTimerTimer(Sender: TObject);
+begin
+  RideCDS.ApplyUpdates(0);
+  RideCDS.Refresh;
+  DriverCDS.Refresh;
+  ActiveDriverCDS.Refresh;
+  RideArchiveCDS.Refresh;
+end;
+
+end.

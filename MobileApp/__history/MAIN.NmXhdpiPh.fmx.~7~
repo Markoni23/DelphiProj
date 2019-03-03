@@ -1,0 +1,20 @@
+inherited Form4_NmXhdpiPh: TForm4_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  OnActivate = FormCreate
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  inherited Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+  end
+  inherited Edit1: TEdit
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 156.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 197.000000000000000000
+  end
+  inherited Button1: TButton
+    Position.X = 328.000000000000000000
+  end
+end
