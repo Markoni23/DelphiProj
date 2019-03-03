@@ -69,4 +69,13 @@ object Auth: TAuth
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
   end
+  object TryLogin: TButton
+    Align = Center
+    Size.Width = 281.000000000000000000
+    Size.Height = 62.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = #1042#1086#1081#1090#1080' '#1074' '#1089#1080#1089#1090#1077#1084#1091
+    OnClick = TryLoginClick
+  end
 end

@@ -1,0 +1,20 @@
+inherited Auth_NmXhdpiPh: TAuth_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited WelcomeToTaxiAppText: TLabel
+    Size.Width = 400.000000000000000000
+  end
+  inherited EnterLoginTextView: TLabel
+    Size.Width = 384.000000000000000000
+  end
+  inherited EnterPassText: TLabel
+    Size.Width = 384.000000000000000000
+  end
+  inherited EnterLoginEditText: TEdit
+    Size.Height = 32.000000000000000000
+  end
+  inherited EnterPassEditText: TEdit
+    Size.Height = 32.000000000000000000
+  end
+end

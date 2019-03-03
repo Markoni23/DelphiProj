@@ -14,12 +14,21 @@ type
     EnterPassText: TLabel;
     EnterLoginEditText: TEdit;
     EnterPassEditText: TEdit;
+    TryLogin: TButton;
+    procedure TryLoginClick(Sender: TObject);
   end;
 var
   NewAuth : TAuth;
 
 implementation
-
+{$R *.fmx}
+{$R *.NmXhdpiPh.fmx ANDROID}
+procedure TAuth.TryLoginClick(Sender: TObject);
 begin
+    if(EnterLoginEditText.Text.IsEmpty or EnterPassEditText.Text.IsEmpty) then begin
+       ShowMessage('Вначале заполните все поля');
+    end
+    else ShowMessage('Вы прошли');
+end;
 
 end.
