@@ -1,0 +1,16 @@
+program Project1;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Edit;
+  Auth in 'Auth.pas' {Auth};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TAuth, Auth);
+  Application.Run;
+end.

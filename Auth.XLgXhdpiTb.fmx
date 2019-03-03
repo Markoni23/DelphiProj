@@ -1,0 +1,23 @@
+inherited Auth_XLgXhdpiTb: TAuth_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  StyleLookup = 'calloutpanelstyle'
+  DesignerMasterStyle = 0
+  inherited WelcomeToTaxiAppText: TLabel
+    Position.Y = 160.000000000000000000
+    Scale.Y = 10.000000000000000000
+    Size.Width = 800.000000000000000000
+  end
+  inherited EnterLoginTextView: TLabel
+    Size.Width = 784.000000000000000000
+  end
+  inherited EnterPassText: TLabel
+    Size.Width = 784.000000000000000000
+  end
+  inherited EnterLoginEditText: TEdit
+    Size.Height = 32.000000000000000000
+  end
+  inherited EnterPassEditText: TEdit
+    Size.Height = 32.000000000000000000
+  end
+end
