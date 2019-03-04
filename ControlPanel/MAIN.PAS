@@ -32,6 +32,7 @@ type
     Label4: TLabel;
     Label5: TLabel;
     IdEdit: TEdit;
+    //wewe
     RideStatusComboBox: TComboBox;
     OrderDatetime: TDateTimePicker;
     RequireDescription: TMemo;

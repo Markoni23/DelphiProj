@@ -57,7 +57,7 @@ implementation
   begin
     query := TFDQuery.Create(nil);
     query.Connection := PgtaxiConnection;
-
+    //ewe
     query.SQL.Add('CALL public."prcUpdateRide"(:ride_id, :driver_id, :status_id, :requirement, :address);');
     query.Params[0].Value := RideId;
     query.Params[1].Value := DriverId;

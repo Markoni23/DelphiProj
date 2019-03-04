@@ -621,7 +621,6 @@ object SDIAppForm: TSDIAppForm
     Top = 283
   end
   object RideArchiveCDS: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'RideArchiveDSP'
@@ -1091,7 +1090,6 @@ object SDIAppForm: TSDIAppForm
     Top = 192
   end
   object ActiveDriverCDS: TClientDataSet
-    Active = True
     Aggregates = <>
     Filter = 'status_id = 1'
     Filtered = True

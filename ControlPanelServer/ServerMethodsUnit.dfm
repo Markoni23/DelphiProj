@@ -5,13 +5,11 @@ object DSServerModule1: TDSServerModule1
   object PgtaxiConnection: TFDConnection
     Params.Strings = (
       'ConnectionDef=PGTaxi')
-    Connected = True
     LoginPrompt = False
     Left = 162
     Top = 247
   end
   object DriverTable: TFDQuery
-    Active = True
     Connection = PgtaxiConnection
     SQL.Strings = (
       'SELECT * FROM "tDriver"')
@@ -19,7 +17,6 @@ object DSServerModule1: TDSServerModule1
     Top = 127
   end
   object RideTable: TFDQuery
-    Active = True
     Connection = PgtaxiConnection
     SQL.Strings = (
       'SELECT * FROM "tRide"')
@@ -27,7 +24,6 @@ object DSServerModule1: TDSServerModule1
     Top = 186
   end
   object RideArchiveTable: TFDQuery
-    Active = True
     Connection = PgtaxiConnection
     SQL.Strings = (
       'SELECT * FROM "tRideArchive"')
@@ -50,7 +46,6 @@ object DSServerModule1: TDSServerModule1
     Top = 240
   end
   object RideStatusTable: TFDQuery
-    Active = True
     Connection = PgtaxiConnection
     SQL.Strings = (
       'SELECT * FROM "tRideStatus"')
@@ -58,7 +53,6 @@ object DSServerModule1: TDSServerModule1
     Top = 306
   end
   object DriverStatusTable: TFDQuery
-    Active = True
     Connection = PgtaxiConnection
     SQL.Strings = (
       'SELECT * FROM "tDriverStatus"')
