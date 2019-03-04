@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.418,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\Taxi.groupproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.418,C:\Users\admin\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\Taxi.groupproj</Transaction>
   </Transactions>
 	<Default.Personality>
-		<Projects ActiveProject="C:\Users\mark\Desktop\delphiwork\delphi\Taxi\ControlPanelServer\ControlPanelServer.dproj"/>
+		<Projects ActiveProject="C:\Users\ACER\Desktop\DelphiProj\ControlPanel\ControlPanel.dproj"/>
 	</Default.Personality>
 </BorlandProject>
