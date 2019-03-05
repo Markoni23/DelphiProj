@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 0
   Caption = 'Form3'
   ClientHeight = 651
-  ClientWidth = 771
+  ClientWidth = 803
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,38 +11,36 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  WindowState = wsMaximized
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object PageControl: TPageControl
     Left = 0
     Top = 0
-    Width = 771
+    Width = 803
     Height = 651
     ActivePage = DriverPage
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 771
     object MainPage: TTabSheet
       Caption = #1040#1082#1090#1080#1074#1085#1099#1077' '#1079#1072#1082#1072#1079#1099
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
+      ExplicitWidth = 763
     end
     object ArchivePage: TTabSheet
       Caption = #1040#1088#1093#1080#1074
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
+      ExplicitWidth = 763
     end
     object DriverPage: TTabSheet
       Caption = #1042#1086#1076#1080#1090#1077#1083#1080
       ImageIndex = 2
+      ExplicitWidth = 763
       object DriverGrid: TDBGrid
         Left = 0
         Top = 0
-        Width = 763
+        Width = 795
         Height = 473
         Align = alTop
         DataSource = DataSource1
@@ -66,7 +64,7 @@ object Form3: TForm3
     end
   end
   object bDelDriver: TButton
-    Left = 570
+    Left = 602
     Top = 503
     Width = 193
     Height = 41
@@ -76,7 +74,7 @@ object Form3: TForm3
     OnClick = bDelDriverClick
   end
   object bEditDriver: TButton
-    Left = 264
+    Left = 296
     Top = 503
     Width = 273
     Height = 41
@@ -90,37 +88,47 @@ object Form3: TForm3
     Params = <>
     ProviderName = 'DriverDSP'
     RemoteServer = DSProviderConnection1
-    Left = 224
-    Top = 408
+    Left = 328
+    Top = 368
   end
   object DataSource1: TDataSource
     DataSet = DriverCDS
-    Left = 232
-    Top = 280
+    Left = 208
+    Top = 192
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DriverCDS
     ScopeMappings = <>
-    Left = 152
-    Top = 320
+    Left = 288
+    Top = 256
   end
   object DSProviderConnection1: TDSProviderConnection
     ServerClassName = 'TServerMethods2'
+    Connected = True
     SQLConnection = SQLConnection1
-    Left = 88
-    Top = 360
+    Left = 136
+    Top = 304
   end
   object SQLConnection1: TSQLConnection
     ConnectionName = 'DataSnapCONNECTION'
     DriverName = 'DataSnap'
+    LoadParamsOnConnect = True
     LoginPrompt = False
     Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
       'DriverName=DataSnap'
       'HostName=localhost'
       'port=211'
       'Filters={}')
-    Left = 24
-    Top = 352
+    Connected = True
+    Left = 112
+    Top = 376
     UniqueId = '{880E32C2-F102-48E5-A90C-ECD671970A40}'
   end
 end

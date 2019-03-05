@@ -27,6 +27,7 @@ type
     procedure AddDriverButtonClick(Sender: TObject);
     procedure bDelDriverClick(Sender: TObject);
     procedure bEditDriverClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,6 +66,8 @@ begin
                                               third_name,car,phone,car_sign);
       DriverCDS.Refresh;
      end;
+
+     DriverCDS.Refresh();
 end;
 
 procedure TForm3.bDelDriverClick(Sender: TObject);
@@ -109,6 +112,34 @@ begin
       end;
   end;
 
+end;
+
+
+
+
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+
+ DriverCDS.Active := True;
+ DriverGrid.Columns.Items[0].Width := 50;
+ DriverGrid.Columns.Items[1].Title.Caption := 'Логин';
+ DriverGrid.Columns.Items[1].Width := 100;
+ DriverGrid.Columns.Items[2].Title.Caption := 'Пароль';
+ DriverGrid.Columns.Items[2].Width := 100;
+ DriverGrid.Columns.Items[3].Title.Caption := 'Фамилия';
+ DriverGrid.Columns.Items[3].Width := 100;
+ DriverGrid.Columns.Items[4].Title.Caption := 'Имя';
+ DriverGrid.Columns.Items[4].Width := 100;
+ DriverGrid.Columns.Items[5].Title.Caption := 'Отчество';
+ DriverGrid.Columns.Items[5].Width := 100;
+ DriverGrid.Columns.Items[6].Title.Caption := 'Автомобиль';
+ DriverGrid.Columns.Items[6].Width := 100;
+ DriverGrid.Columns.Items[7].Title.Caption := 'Телефон';
+ DriverGrid.Columns.Items[7].Width := 100;
+ DriverGrid.Columns.Items[8].Title.Caption := 'Гос.номер';
+ DriverGrid.Columns.Items[8].Width := 100;
+ DriverGrid.Columns.Items[9].Visible := False;
 end;
 
 end.

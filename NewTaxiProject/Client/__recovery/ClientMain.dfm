@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 0
   Caption = 'Form3'
   ClientHeight = 651
-  ClientWidth = 771
+  ClientWidth = 803
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,31 +11,36 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  WindowState = wsMaximized
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object PageControl: TPageControl
     Left = 0
     Top = 0
-    Width = 771
+    Width = 803
     Height = 651
     ActivePage = DriverPage
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 771
     object MainPage: TTabSheet
       Caption = #1040#1082#1090#1080#1074#1085#1099#1077' '#1079#1072#1082#1072#1079#1099
+      ExplicitWidth = 763
     end
     object ArchivePage: TTabSheet
       Caption = #1040#1088#1093#1080#1074
       ImageIndex = 1
+      ExplicitWidth = 763
     end
     object DriverPage: TTabSheet
       Caption = #1042#1086#1076#1080#1090#1077#1083#1080
       ImageIndex = 2
+      ExplicitWidth = 763
       object DriverGrid: TDBGrid
         Left = 0
         Top = 0
-        Width = 763
+        Width = 795
         Height = 473
         Align = alTop
         DataSource = DataSource1
@@ -59,7 +64,7 @@ object Form3: TForm3
     end
   end
   object bDelDriver: TButton
-    Left = 570
+    Left = 602
     Top = 503
     Width = 193
     Height = 41
@@ -69,7 +74,7 @@ object Form3: TForm3
     OnClick = bDelDriverClick
   end
   object bEditDriver: TButton
-    Left = 264
+    Left = 296
     Top = 503
     Width = 273
     Height = 41
