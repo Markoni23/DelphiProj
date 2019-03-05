@@ -6,7 +6,7 @@ uses
   ClientModuleUnit1 in 'ClientModuleUnit1.pas' {ClientModule1: TDataModule},
   EditDriver in 'EditDriver.pas' {Form5},
   ClientClassesUnit1 in 'ClientClassesUnit1.pas',
-  EditOrder in '..\NewTaxiProject\Client\EditOrder.pas' {EditOrderForm};
+  EditOrder in 'EditOrder.pas' {EditOrderForm};
 
 {$R *.res}
 

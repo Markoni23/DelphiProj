@@ -112,7 +112,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="ClientClassesUnit1.pas"/>
-        <DCCReference Include="EditOrder.pas">
+        <DCCReference Include="..\NewTaxiProject\Client\EditOrder.pas">
             <Form>EditOrderForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
