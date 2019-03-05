@@ -1,0 +1,82 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 651
+  ClientWidth = 771
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl: TPageControl
+    Left = 0
+    Top = 0
+    Width = 771
+    Height = 651
+    ActivePage = DriverPage
+    Align = alClient
+    TabOrder = 0
+    object MainPage: TTabSheet
+      Caption = #1040#1082#1090#1080#1074#1085#1099#1077' '#1079#1072#1082#1072#1079#1099
+    end
+    object ArchivePage: TTabSheet
+      Caption = #1040#1088#1093#1080#1074
+      ImageIndex = 1
+    end
+    object DriverPage: TTabSheet
+      Caption = #1042#1086#1076#1080#1090#1077#1083#1080
+      ImageIndex = 2
+      ExplicitLeft = 8
+      ExplicitTop = 28
+      object DriverGrid: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 763
+        Height = 473
+        Align = alTop
+        DataSource = DataSource1
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+      object AddDriverButton: TButton
+        Left = 3
+        Top = 495
+        Width = 273
+        Height = 41
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1085#1086#1074#1086#1075#1086' '#1074#1086#1076#1080#1090#1077#1083#1103
+        Style = bsCommandLink
+        TabOrder = 1
+      end
+    end
+  end
+  object DSProviderConnection1: TDSProviderConnection
+    ServerClassName = 'TServerMethods2'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 40
+    Top = 464
+  end
+  object DriverDSP: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DriverDSP'
+    RemoteServer = DSProviderConnection1
+    Left = 88
+    Top = 408
+  end
+  object DataSource1: TDataSource
+    DataSet = DriverDSP
+    Left = 120
+    Top = 408
+  end
+end

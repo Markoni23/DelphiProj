@@ -1,0 +1,33 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 481
+  ClientWidth = 689
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SQLConnection1: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'HostName=localhost'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'Filters={}')
+    Left = 128
+    Top = 224
+  end
+end

@@ -4,6 +4,6 @@
     <Transaction>1899.12.30 00:00:00.000.418,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\Taxi.groupproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj</Transaction>
   </Transactions>
 	<Default.Personality>
-		<Projects ActiveProject="C:\Users\mark\Desktop\delphiwork\delphi\Taxi\ControlPanelServer\ControlPanelServer.dproj"/>
+		<Projects ActiveProject="C:\Users\mark\Desktop\delphiwork\delphi\Taxi\ControlPanel\ControlPanel.dproj"/>
 	</Default.Personality>
 </BorlandProject>

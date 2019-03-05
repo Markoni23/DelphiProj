@@ -1,0 +1,36 @@
+unit ClientMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Datasnap.DBClient,
+  Datasnap.DSConnect, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls;
+
+type
+  TForm3 = class(TForm)
+    DSProviderConnection1: TDSProviderConnection;
+    DriverDSP: TClientDataSet;
+    PageControl: TPageControl;
+    MainPage: TTabSheet;
+    ArchivePage: TTabSheet;
+    DriverPage: TTabSheet;
+    DriverGrid: TDBGrid;
+    DataSource1: TDataSource;
+    AddDriverButton: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+uses ClientModuleUnit1, ClientClassesUnit1;
+
+{$R *.dfm}
+
+end.
