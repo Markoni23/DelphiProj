@@ -20,7 +20,10 @@ type
     FDTransaction1: TFDTransaction;
     SPDeleteDriver: TFDStoredProc;
     SPEditDriver: TFDStoredProc;
-    ActiveOrdersTable: TFDQuery;
+    ArchiveTable: TFDQuery;
+    ArchiveDSP: TDataSetProvider;
+    ActiveOrderTable: TFDQuery;
+    ActiveOrderDSP: TDataSetProvider;
   private
     { Private declarations }
   public

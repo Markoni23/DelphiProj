@@ -5,9 +5,10 @@ object ServerMethods2: TServerMethods2
   object PGTaxiConnection: TFDConnection
     Params.Strings = (
       'ConnectionDef=PGTaxi')
+    Connected = True
     LoginPrompt = False
-    Left = 24
-    Top = 168
+    Left = 16
+    Top = 120
   end
   object DriverTable: TFDQuery
     Connection = PGTaxiConnection
@@ -18,14 +19,14 @@ object ServerMethods2: TServerMethods2
   end
   object DriverDSP: TDataSetProvider
     DataSet = DriverTable
-    Left = 256
-    Top = 224
+    Left = 184
+    Top = 48
   end
   object SPNewDriver: TFDStoredProc
     Connection = PGTaxiConnection
     StoredProcName = 'fnnewdriver'
-    Left = 120
-    Top = 248
+    Left = 112
+    Top = 280
     ParamData = <
       item
         Position = 1
@@ -86,14 +87,14 @@ object ServerMethods2: TServerMethods2
   end
   object FDTransaction1: TFDTransaction
     Connection = PGTaxiConnection
-    Left = 320
-    Top = 64
+    Left = 32
+    Top = 272
   end
   object SPDeleteDriver: TFDStoredProc
     Connection = PGTaxiConnection
     StoredProcName = 'fndeletedriver'
-    Left = 200
-    Top = 40
+    Left = 144
+    Top = 280
     ParamData = <
       item
         Position = 1
@@ -106,8 +107,8 @@ object ServerMethods2: TServerMethods2
   object SPEditDriver: TFDStoredProc
     Connection = PGTaxiConnection
     StoredProcName = '"fnEditDriver"'
-    Left = 256
-    Top = 24
+    Left = 176
+    Top = 280
     ParamData = <
       item
         Position = 1
@@ -180,9 +181,26 @@ object ServerMethods2: TServerMethods2
         ParamType = ptInput
       end>
   end
-  object ActiveOrdersTable: TFDQuery
+  object ArchiveTable: TFDQuery
     Connection = PGTaxiConnection
+    SQL.Strings = (
+      'select * from "Orders" where "Order_Status" = 5; ')
     Left = 112
     Top = 104
+  end
+  object ArchiveDSP: TDataSetProvider
+    DataSet = ArchiveTable
+    Left = 184
+    Top = 104
+  end
+  object ActiveOrderTable: TFDQuery
+    Connection = PGTaxiConnection
+    Left = 112
+    Top = 160
+  end
+  object ActiveOrderDSP: TDataSetProvider
+    DataSet = ActiveOrderTable
+    Left = 184
+    Top = 160
   end
 end
