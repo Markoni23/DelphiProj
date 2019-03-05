@@ -11,6 +11,7 @@ object ServerMethods2: TServerMethods2
     Top = 120
   end
   object DriverTable: TFDQuery
+    DetailFields = 'ID;Login;First_Name;Second_Name;Third_Name;Car;Car_Sign;Phone'
     Connection = PGTaxiConnection
     SQL.Strings = (
       'select * from "Driver"')
@@ -182,9 +183,13 @@ object ServerMethods2: TServerMethods2
       end>
   end
   object ArchiveTable: TFDQuery
+    DetailFields = 'ID;AddressFrom;AddressTo;OrderDate;Additional;Login'
     Connection = PGTaxiConnection
     SQL.Strings = (
-      'select * from "Orders" where "Order_Status" = 5; ')
+      'select * from "Orders" '
+      'inner join "Driver" on'
+      '"Orders"."ID_Driver" ="Driver"."ID"'
+      'where "Order_Status" = 5; ')
     Left = 112
     Top = 104
   end
@@ -194,9 +199,18 @@ object ServerMethods2: TServerMethods2
     Top = 104
   end
   object ActiveOrderTable: TFDQuery
+    DetailFields = 'ID;AddressFrom;AddressTo;OrderDate;Additional;Status;Login'
     Connection = PGTaxiConnection
     SQL.Strings = (
-      'select * from "Orders" where "Order_Status" <> 5;')
+      'select * from "Orders" o'
+      'inner join "Order_status" os on'
+      'os."ID" = o."Order_Status"'
+      'left join "Driver" d on'
+      'o."ID_Driver" = d."ID"'
+      'left join "Driver_status" ds on'
+      'ds."ID" = d."Driver_Status"'
+      ''
+      '')
     Left = 112
     Top = 160
   end
@@ -257,7 +271,7 @@ object ServerMethods2: TServerMethods2
   object SPEditOrder: TFDStoredProc
     Connection = PGTaxiConnection
     StoredProcName = '"fnEditOrder"'
-    Left = 176
+    Left = 192
     Top = 232
     ParamData = <
       item
@@ -320,7 +334,7 @@ object ServerMethods2: TServerMethods2
   object SPChangeOrderStat: TFDStoredProc
     Connection = PGTaxiConnection
     StoredProcName = '"fnChangeOrderStatus"'
-    Left = 208
+    Left = 232
     Top = 232
     ParamData = <
       item
@@ -333,6 +347,32 @@ object ServerMethods2: TServerMethods2
       item
         Position = 2
         Name = 'in_id_order'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end>
+  end
+  object FDQuery1: TFDQuery
+    Connection = PGTaxiConnection
+    Left = 288
+    Top = 104
+  end
+  object SPDriverToOrder: TFDStoredProc
+    Connection = PGTaxiConnection
+    StoredProcName = '"fnDriverToOrder"'
+    Left = 272
+    Top = 232
+    ParamData = <
+      item
+        Position = 1
+        Name = 'in_driver_id'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end
+      item
+        Position = 2
+        Name = 'in_order_id'
         DataType = ftInteger
         FDDataType = dtInt32
         ParamType = ptInput

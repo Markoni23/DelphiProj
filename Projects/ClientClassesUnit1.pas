@@ -1,7 +1,7 @@
 //
 // Created by the DataSnap proxy generator.
-// 05.03.2019 17:16:39
-// 
+// 06.03.2019 1:19:55
+//
 
 unit ClientClassesUnit1;
 
@@ -17,6 +17,11 @@ type
     FCreateNewDriverCommand: TDBXCommand;
     FDeleteDriverCommand: TDBXCommand;
     FEditDriverCommand: TDBXCommand;
+    FNewOrderCommand: TDBXCommand;
+    FDeleteOrderCommand: TDBXCommand;
+    FEditOrderCommand: TDBXCommand;
+    FChangeOrdeerStatCommand: TDBXCommand;
+    FDriverToOrderCommand: TDBXCommand;
   public
     constructor Create(ADBXConnection: TDBXConnection); overload;
     constructor Create(ADBXConnection: TDBXConnection; AInstanceOwner: Boolean); overload;
@@ -26,6 +31,11 @@ type
     procedure CreateNewDriver(Login: string; Password: string; First_Name: string; Second_Name: string; Third_name: string; Car: string; Phone: string; Car_Sign: string);
     procedure DeleteDriver(Id: Integer);
     procedure EditDriver(in_id: Integer; in_login: string; in_password: string; in_first_name: string; in_second_name: string; in_third_name: string; in_car: string; in_phone: string; in_car_sign: string; in_driver_status: Integer);
+    procedure NewOrder(in_addres_from: string; in_addres_to: string; in_additional: string; in_data_start: TDateTime);
+    procedure DeleteOrder(in_id: Integer);
+    procedure EditOrder(in_id: Integer; in_driver_id: Integer; in_order_status: Integer; in_addres_from: string; in_addres_to: string; in_additional: string; in_order_start: TDateTime; in_order_finish: TDateTime);
+    procedure ChangeOrdeerStat(in_new_stat: Integer; in_id_order: Integer);
+    procedure DriverToOrder(in_driver_id: Integer; in_order_id: Integer);
   end;
 
 implementation
@@ -113,6 +123,83 @@ begin
   FEditDriverCommand.ExecuteUpdate;
 end;
 
+procedure TServerMethods1Client.NewOrder(in_addres_from: string; in_addres_to: string; in_additional: string; in_data_start: TDateTime);
+begin
+  if FNewOrderCommand = nil then
+  begin
+    FNewOrderCommand := FDBXConnection.CreateCommand;
+    FNewOrderCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FNewOrderCommand.Text := 'TServerMethods2.NewOrder';
+    FNewOrderCommand.Prepare;
+  end;
+  FNewOrderCommand.Parameters[0].Value.SetWideString(in_addres_from);
+  FNewOrderCommand.Parameters[1].Value.SetWideString(in_addres_to);
+  FNewOrderCommand.Parameters[2].Value.SetWideString(in_additional);
+  FNewOrderCommand.Parameters[3].Value.AsDateTime := in_data_start;
+  FNewOrderCommand.ExecuteUpdate;
+end;
+
+procedure TServerMethods1Client.DeleteOrder(in_id: Integer);
+begin
+  if FDeleteOrderCommand = nil then
+  begin
+    FDeleteOrderCommand := FDBXConnection.CreateCommand;
+    FDeleteOrderCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FDeleteOrderCommand.Text := 'TServerMethods2.DeleteOrder';
+    FDeleteOrderCommand.Prepare;
+  end;
+  FDeleteOrderCommand.Parameters[0].Value.SetInt32(in_id);
+  FDeleteOrderCommand.ExecuteUpdate;
+end;
+
+procedure TServerMethods1Client.EditOrder(in_id: Integer; in_driver_id: Integer; in_order_status: Integer; in_addres_from: string; in_addres_to: string; in_additional: string; in_order_start: TDateTime; in_order_finish: TDateTime);
+begin
+  if FEditOrderCommand = nil then
+  begin
+    FEditOrderCommand := FDBXConnection.CreateCommand;
+    FEditOrderCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FEditOrderCommand.Text := 'TServerMethods2.EditOrder';
+    FEditOrderCommand.Prepare;
+  end;
+  FEditOrderCommand.Parameters[0].Value.SetInt32(in_id);
+  FEditOrderCommand.Parameters[1].Value.SetInt32(in_driver_id);
+  FEditOrderCommand.Parameters[2].Value.SetInt32(in_order_status);
+  FEditOrderCommand.Parameters[3].Value.SetWideString(in_addres_from);
+  FEditOrderCommand.Parameters[4].Value.SetWideString(in_addres_to);
+  FEditOrderCommand.Parameters[5].Value.SetWideString(in_additional);
+  FEditOrderCommand.Parameters[6].Value.AsDateTime := in_order_start;
+  FEditOrderCommand.Parameters[7].Value.AsDateTime := in_order_finish;
+  FEditOrderCommand.ExecuteUpdate;
+end;
+
+procedure TServerMethods1Client.ChangeOrdeerStat(in_new_stat: Integer; in_id_order: Integer);
+begin
+  if FChangeOrdeerStatCommand = nil then
+  begin
+    FChangeOrdeerStatCommand := FDBXConnection.CreateCommand;
+    FChangeOrdeerStatCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FChangeOrdeerStatCommand.Text := 'TServerMethods2.ChangeOrdeerStat';
+    FChangeOrdeerStatCommand.Prepare;
+  end;
+  FChangeOrdeerStatCommand.Parameters[0].Value.SetInt32(in_new_stat);
+  FChangeOrdeerStatCommand.Parameters[1].Value.SetInt32(in_id_order);
+  FChangeOrdeerStatCommand.ExecuteUpdate;
+end;
+
+procedure TServerMethods1Client.DriverToOrder(in_driver_id: Integer; in_order_id: Integer);
+begin
+  if FDriverToOrderCommand = nil then
+  begin
+    FDriverToOrderCommand := FDBXConnection.CreateCommand;
+    FDriverToOrderCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FDriverToOrderCommand.Text := 'TServerMethods2.DriverToOrder';
+    FDriverToOrderCommand.Prepare;
+  end;
+  FDriverToOrderCommand.Parameters[0].Value.SetInt32(in_driver_id);
+  FDriverToOrderCommand.Parameters[1].Value.SetInt32(in_order_id);
+  FDriverToOrderCommand.ExecuteUpdate;
+end;
+
 constructor TServerMethods1Client.Create(ADBXConnection: TDBXConnection);
 begin
   inherited Create(ADBXConnection);
@@ -130,7 +217,13 @@ begin
   FCreateNewDriverCommand.DisposeOf;
   FDeleteDriverCommand.DisposeOf;
   FEditDriverCommand.DisposeOf;
+  FNewOrderCommand.DisposeOf;
+  FDeleteOrderCommand.DisposeOf;
+  FEditOrderCommand.DisposeOf;
+  FChangeOrdeerStatCommand.DisposeOf;
+  FDriverToOrderCommand.DisposeOf;
   inherited;
 end;
 
 end.
+

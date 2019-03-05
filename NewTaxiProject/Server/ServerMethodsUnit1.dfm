@@ -18,14 +18,14 @@ object ServerMethods2: TServerMethods2
     Connection = PGTaxiConnection
     SQL.Strings = (
       'select * from "Driver"')
-    Left = 112
-    Top = 120
+    Left = 96
+    Top = 88
   end
   object DriverDSP: TDataSetProvider
     DataSet = DriverTable
     ResolveToDataSet = True
-    Left = 192
-    Top = 160
+    Left = 208
+    Top = 80
   end
   object SPNewDriver: TFDStoredProc
     Connection = PGTaxiConnection
@@ -93,7 +93,7 @@ object ServerMethods2: TServerMethods2
   object FDTransaction1: TFDTransaction
     Connection = PGTaxiConnection
     Left = 32
-    Top = 16
+    Top = 8
   end
   object SPDeleteDriver: TFDStoredProc
     Connection = PGTaxiConnection
@@ -188,7 +188,7 @@ object ServerMethods2: TServerMethods2
   end
   object ActiveOrdersTable: TFDQuery
     Connection = PGTaxiConnection
-    Left = 120
+    Left = 136
     Top = 16
   end
 end

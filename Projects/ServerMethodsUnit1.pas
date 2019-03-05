@@ -28,6 +28,8 @@ type
     SPDeleteOrder: TFDStoredProc;
     SPEditOrder: TFDStoredProc;
     SPChangeOrderStat: TFDStoredProc;
+    FDQuery1: TFDQuery;
+    SPDriverToOrder: TFDStoredProc;
   private
     { Private declarations }
   public
@@ -39,6 +41,14 @@ type
     procedure DeleteDriver(Id: integer);
     procedure EditDriver(in_id : integer; in_login,in_password, in_first_name,in_second_name,
             in_third_name, in_car, in_phone, in_car_sign: string;in_driver_status:integer);
+    procedure NewOrder(in_addres_from,in_addres_to,in_additional :
+                        string; in_data_start :TDateTime);
+    procedure DeleteOrder(in_id:integer);
+    procedure EditOrder(in_id, in_driver_id,in_order_status:integer;
+                    in_addres_from,in_addres_to,in_additional: string;
+                     in_order_start,in_order_finish : TDateTime);
+    procedure ChangeOrdeerStat(in_new_stat,in_id_order:integer);
+    procedure DriverToOrder(in_driver_id,in_order_id : integer);
   end;
 
 implementation
@@ -103,6 +113,64 @@ begin
   end;
 end;
 
+procedure TServerMethods2.NewOrder(in_addres_from: string; in_addres_to: string; in_additional: string; in_data_start: TDateTime);
+begin
+  with SPNewOrder do
+  begin
+    ParamByName('in_addres_from').Value := in_addres_from;
+    ParamByName('in_addres_to').Value := in_addres_to;
+    ParamByName('in_additional').Value := in_additional;
+    ParamByName('in_data_start').Value := in_data_start;
+    ExecProc;
+  end;
+end;
 
+procedure TServerMethods2.DeleteOrder(in_id:integer);
+begin
+  with SPDeleteOrder do
+    begin
+      ParamByName('in_id').Value := in_id;
+      ExecProc;
+    end;
+end;
+
+procedure TServerMethods2.EditOrder(in_id: Integer; in_driver_id: Integer;
+          in_order_status: Integer; in_addres_from: string;
+          in_addres_to: string; in_additional: string; in_order_start: TDateTime;
+          in_order_finish: TDateTime);
+begin
+  with SPEditOrder do
+  begin
+    ParamByName('in_id').Value := in_id;
+    ParamByName('in_driver_id').Value := in_driver_id;
+    ParamByName('in_order_status').Value := in_order_status;
+    ParamByName('in_addres_from').Value := in_addres_from;
+    ParamByName('in_addres_to').Value := in_addres_to;
+    ParamByName('in_additional').Value := in_additional;
+    ParamByName('in_order_start').Value := in_order_start;
+    ParamByName('in_order_finish').Value := in_order_finish;
+    ExecProc;
+  end;
+end;
+
+procedure TServerMethods2.ChangeOrdeerStat(in_new_stat: Integer; in_id_order: Integer);
+begin
+  with SPChangeOrderStat do
+  begin
+    ParamByName('in_new_stat').Value := in_new_stat;
+    ParamByName('in_id_order').Value := in_id_order;
+    ExecProc;
+  end;
+end;
+
+procedure TServerMethods2.DriverToOrder(in_driver_id: Integer; in_order_id: Integer);
+begin
+  with SPDriverToOrder do
+  begin
+    ParamByName('in_driver_id').Value := in_driver_id;
+    ParamByName('in_order_id').Value := in_order_id;
+    ExecProc;
+  end;
+end;
 end.
 

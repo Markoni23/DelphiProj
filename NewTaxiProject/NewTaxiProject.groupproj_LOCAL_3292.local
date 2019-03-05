@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.798,C:\Users\ACER\Desktop\DelphiProj\Projects\ProjectGroup1.groupproj=C:\Users\ACER\Desktop\DelphiProj\Projects\NewTaxiProject.groupproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.318,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj</Transaction>
+  </Transactions>
+	<Default.Personality>
+		<Projects ActiveProject="C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\TaxiServer1.dproj"/>
+	</Default.Personality>
+</BorlandProject>

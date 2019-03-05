@@ -33,9 +33,19 @@ type
     ActiveOrderDS: TDataSource;
     BindSourceDB3: TBindSourceDB;
     bAddNewOrder: TButton;
+    bDelOrder: TButton;
+    ActiveDriverGrid: TDBGrid;
+    ActiveDriverCDS: TClientDataSet;
+    ActiveDriverDS: TDataSource;
+    BindSourceDB4: TBindSourceDB;
+    bDriverToOrder: TButton;
     procedure AddDriverButtonClick(Sender: TObject);
     procedure bDelDriverClick(Sender: TObject);
     procedure bEditDriverClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure bAddNewOrderClick(Sender: TObject);
+    procedure bDelOrderClick(Sender: TObject);
+    procedure bDriverToOrderClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,7 +57,7 @@ var
 
 implementation
 
-uses ClientModuleUnit1, ClientClassesUnit1, EditDriver;
+uses ClientModuleUnit1, ClientClassesUnit1, EditDriver, EditOrder;
 
 {$R *.dfm}
 
@@ -76,12 +86,42 @@ begin
      end;
 end;
 
+procedure TForm3.bAddNewOrderClick(Sender: TObject);
+begin
+  if EditOrderForm.ShowModal = mrOk then
+  begin
+  with EditOrderForm do
+  begin
+    Caption := 'Создать новый ' + Caption;
+    ClientModule1.ServerMethods1Client.NewOrder(eAddresStart.Text,eAddresTo.Text,eAdditional.Text,
+                                                DateTimePicker1.DateTime);
+  end;
+   ActiveOrdersCDS.Refresh;
+  end;
+end;
+
 procedure TForm3.bDelDriverClick(Sender: TObject);
  var id:integer;
 begin
   id := DriverCDS.FieldByName('id').Value;
   ClientModule1.ServerMethods1Client.DeleteDriver(id);
   DriverCds.Refresh;
+end;
+
+procedure TForm3.bDelOrderClick(Sender: TObject);
+begin
+  ClientModule1.ServerMethods1Client.DeleteOrder(ActiveOrdersCDS.FieldByName('id').Value);
+  ActiveOrdersCDS.Refresh;
+end;
+
+procedure TForm3.bDriverToOrderClick(Sender: TObject);
+var id_driver, id_order : integer;
+begin
+  id_driver := ActiveDriverCDS.FieldByName('id').Value;
+  id_order := ActiveOrdersCDS.FieldByName('id').Value;
+  ClientModule1.ServerMethods1Client.DriverToOrder(id_driver,id_order);
+  ActiveDriverCDS.Refresh;
+  ActiveOrdersCDS.Refresh;
 end;
 
 procedure TForm3.bEditDriverClick(Sender: TObject);
@@ -117,6 +157,27 @@ begin
       DriverCDS.Refresh;
       end;
   end;
+
+end;
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+    DriverCDS.Active:=True;
+    ArchiveCDS.Active:=True;
+    ActiveOrdersCDS.Active:=True;
+
+    DriverGrid.Columns.Items[0].Width:=40;
+    DriverGrid.Columns.Items[1].DisplayName:='Логин';
+    DriverGrid.Columns.Items[1].Width:=100;
+    DriverGrid.Columns.Items[2].Visible := False;
+    DriverGrid.Columns.Items[3].Width:=100;
+    DriverGrid.Columns.Items[3].DisplayName:='фамилия';
+    DriverGrid.Columns.Items[4].Width:=100;
+    DriverGrid.Columns.Items[4].DisplayName:='Имя';
+    DriverGrid.Columns.Items[5].Width:=100;
+    DriverGrid.Columns.Items[5].DisplayName:='Отчество';
+
+
 
 end;
 

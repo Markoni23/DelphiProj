@@ -11,6 +11,7 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object PageControl: TPageControl
@@ -45,13 +46,45 @@ object Form3: TForm3
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1085#1086#1074#1099#1081' '#1079#1072#1082#1072#1079
         Style = bsCommandLink
         TabOrder = 1
+        OnClick = bAddNewOrderClick
+      end
+      object bDelOrder: TButton
+        Left = 247
+        Top = 272
+        Width = 258
+        Height = 41
+        Caption = #1059#1076#1072#1083#1080#1090#1100' '#1074#1099#1073#1088#1072#1085#1085#1099#1081' '#1079#1072#1082#1072#1079
+        Style = bsCommandLink
+        TabOrder = 2
+        OnClick = bDelOrderClick
+      end
+      object ActiveDriverGrid: TDBGrid
+        Left = 360
+        Top = 336
+        Width = 385
+        Height = 265
+        DataSource = ActiveDriverDS
+        TabOrder = 3
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+      object bDriverToOrder: TButton
+        Left = 486
+        Top = 272
+        Width = 259
+        Height = 41
+        Caption = #1053#1072#1079#1085#1072#1095#1080#1090#1100' '#1074#1086#1076#1080#1090#1077#1083#1103' '#1085#1072' '#1079#1072#1082#1072#1079
+        Style = bsCommandLink
+        TabOrder = 4
+        OnClick = bDriverToOrderClick
       end
     end
     object ArchivePage: TTabSheet
       Caption = #1040#1088#1093#1080#1074
       ImageIndex = 1
-      ExplicitLeft = -44
-      ExplicitTop = 0
       object ArchiveGrid: TDBGrid
         Left = 0
         Top = 0
@@ -139,8 +172,8 @@ object Form3: TForm3
     ServerClassName = 'TServerMethods2'
     Connected = True
     SQLConnection = SQLConnection1
-    Left = 48
-    Top = 528
+    Left = 128
+    Top = 376
   end
   object SQLConnection1: TSQLConnection
     ConnectionName = 'DataSnapCONNECTION'
@@ -152,8 +185,8 @@ object Form3: TForm3
       'port=211'
       'Filters={}')
     Connected = True
-    Left = 8
-    Top = 536
+    Left = 16
+    Top = 464
     UniqueId = '{880E32C2-F102-48E5-A90C-ECD671970A40}'
   end
   object ArchiveCDS: TClientDataSet
@@ -176,6 +209,7 @@ object Form3: TForm3
     Top = 528
   end
   object ActiveOrdersCDS: TClientDataSet
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'ActiveOrderDSP'
@@ -193,5 +227,27 @@ object Form3: TForm3
     ScopeMappings = <>
     Left = 216
     Top = 576
+  end
+  object ActiveDriverCDS: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Filter = 'Driver_Status = 2'
+    Filtered = True
+    Params = <>
+    ProviderName = 'DriverDSP'
+    RemoteServer = DSProviderConnection1
+    Left = 104
+    Top = 424
+  end
+  object ActiveDriverDS: TDataSource
+    DataSet = ActiveDriverCDS
+    Left = 152
+    Top = 424
+  end
+  object BindSourceDB4: TBindSourceDB
+    DataSet = ActiveDriverCDS
+    ScopeMappings = <>
+    Left = 216
+    Top = 432
   end
 end

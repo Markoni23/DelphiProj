@@ -56,7 +56,6 @@ object EditOrderForm: TEditOrderForm
     Width = 273
     Height = 21
     TabOrder = 1
-    Text = 'eAddresStart'
   end
   object eAddresTo: TEdit
     Left = 128
@@ -64,7 +63,6 @@ object EditOrderForm: TEditOrderForm
     Width = 273
     Height = 21
     TabOrder = 2
-    Text = 'eAddresStart'
   end
   object eAdditional: TEdit
     Left = 128
@@ -72,7 +70,6 @@ object EditOrderForm: TEditOrderForm
     Width = 273
     Height = 21
     TabOrder = 3
-    Text = 'eAddresStart'
   end
   object DateTimePicker1: TDateTimePicker
     Left = 128

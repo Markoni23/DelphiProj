@@ -1,33 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.995,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit5.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\EditDriver.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.177,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientMain.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.414,=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.566,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\Unit2.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\EditOrder.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.155,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.794,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit11.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.810,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit11.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.147,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.186,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.001,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mark\Documents\Embarcadero\Studio\Projects\TaxiClient.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.177,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientMain.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.368,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit1.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.860,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.995,C:\Users\mark\Documents\Embarcadero\Studio\Projects\EditDriver.dfm=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit5.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.810,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit11.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.535,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.891,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas=</Transaction>
+<<<<<<< HEAD
     <Transaction>1899.12.30 00:00:00.000.893,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.177,C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientMain.dfm=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.001,C:\Users\mark\Documents\Embarcadero\Studio\Projects\TaxiClient.dproj=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+=======
+>>>>>>> 0ef78dfc31c7d27801a40dab4868dee0d3e764f2
     <Transaction>1899.12.30 00:00:00.000.483,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.042,C:\Users\mark\Documents\Embarcadero\Studio\Projects\TaxiClient.dproj=C:\Users\mark\Documents\Embarcadero\Studio\Projects\TaxiClient.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.398,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.627,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>1899.12.30 00:00:00.000.995,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit5.dfm=C:\Users\mark\Documents\Embarcadero\Studio\Projects\EditDriver.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.343,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.842,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientModuleUnit1.pas</Transaction>
+=======
+    <Transaction>1899.12.30 00:00:00.000.042,C:\Users\mark\Documents\Embarcadero\Studio\Projects\TaxiClient.dproj=C:\Users\mark\Documents\Embarcadero\Studio\Projects\TaxiClient.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.186,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.893,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientClassesUnit1.pas</Transaction>
+>>>>>>> 0ef78dfc31c7d27801a40dab4868dee0d3e764f2
     <Transaction>1899.12.30 00:00:00.000.110,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.177,C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.343,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.566,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\Unit2.dfm=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\EditOrder.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.748,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>2019.03.05 23:53:04.414,=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\Unit2.pas</Transaction>
     <Transaction>2019.03.05 23:53:21.566,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\EditOrder.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\Unit2.pas</Transaction>
     <Transaction>2019.03.05 23:53:21.566,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\EditOrder.dfm=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\Unit2.dfm</Transaction>
     <Transaction>2019.03.06 00:17:07.137,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewTaxiProject\Client\EditOrder.dfm=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\EditOrder.dfm</Transaction>
     <Transaction>2019.03.06 00:17:07.137,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewTaxiProject\Client\EditOrder.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\Projects\EditOrder.pas</Transaction>
+=======
+    <Transaction>1899.12.30 00:00:00.000.995,C:\Users\mark\Documents\Embarcadero\Studio\Projects\EditDriver.pas=C:\Users\mark\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.842,=C:\Users\mark\Documents\Embarcadero\Studio\Projects\ClientModuleUnit1.pas</Transaction>
+>>>>>>> 0ef78dfc31c7d27801a40dab4868dee0d3e764f2
   </Transactions>
 </BorlandProject>
