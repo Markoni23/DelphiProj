@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Datasnap.DBClient,
   Datasnap.DSConnect, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls,
   Data.Bind.Components, Data.Bind.DBScope, Data.DBXDataSnap, Data.DBXCommon,
-  IPPeerClient, Data.SqlExpr;
+  IPPeerClient, Data.SqlExpr, Vcl.ExtCtrls;
 
 type
   TForm3 = class(TForm)
@@ -24,10 +24,12 @@ type
     SQLConnection1: TSQLConnection;
     bDelDriver: TButton;
     bEditDriver: TButton;
+    Refreshing: TTimer;
     procedure AddDriverButtonClick(Sender: TObject);
     procedure bDelDriverClick(Sender: TObject);
     procedure bEditDriverClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure RefreshingTimer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,7 +66,7 @@ begin
       end;
       ClientModule1.ServerMethods1Client.CreateNewDriver(login,password,first_name,second_name,
                                               third_name,car,phone,car_sign);
-      DriverCDS.Refresh;
+
      end;
 
 
@@ -115,9 +117,6 @@ begin
 end;
 
 
-
-
-
 procedure TForm3.FormCreate(Sender: TObject);
 begin
 
@@ -140,6 +139,11 @@ begin
  DriverGrid.Columns.Items[8].Title.Caption := 'Гос.номер';
  DriverGrid.Columns.Items[8].Width := 100;
  DriverGrid.Columns.Items[9].Visible := False;
+end;
+
+procedure TForm3.RefreshingTimer(Sender: TObject);
+begin
+    DriverCDS.Refresh();
 end;
 
 end.

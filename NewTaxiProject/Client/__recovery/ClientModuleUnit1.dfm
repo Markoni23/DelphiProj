@@ -1,7 +1,7 @@
 object ClientModule1: TClientModule1
   OldCreateOrder = False
-  Height = 271
-  Width = 415
+  Height = 279
+  Width = 414
   object SQLConnection1: TSQLConnection
     ConnectionName = 'DataSnapCONNECTION'
     DriverName = 'DataSnap'

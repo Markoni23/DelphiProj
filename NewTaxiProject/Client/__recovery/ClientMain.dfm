@@ -131,4 +131,9 @@ object Form3: TForm3
     Top = 376
     UniqueId = '{880E32C2-F102-48E5-A90C-ECD671970A40}'
   end
+  object Refreshing: TTimer
+    OnTimer = RefreshingTimer
+    Left = 392
+    Top = 328
+  end
 end
