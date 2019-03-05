@@ -24,6 +24,10 @@ type
     ArchiveDSP: TDataSetProvider;
     ActiveOrderTable: TFDQuery;
     ActiveOrderDSP: TDataSetProvider;
+    SPNewOrder: TFDStoredProc;
+    SPDeleteOrder: TFDStoredProc;
+    SPEditOrder: TFDStoredProc;
+    SPChangeOrderStat: TFDStoredProc;
   private
     { Private declarations }
   public

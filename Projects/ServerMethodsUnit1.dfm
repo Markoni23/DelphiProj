@@ -195,6 +195,8 @@ object ServerMethods2: TServerMethods2
   end
   object ActiveOrderTable: TFDQuery
     Connection = PGTaxiConnection
+    SQL.Strings = (
+      'select * from "Orders" where "Order_Status" <> 5;')
     Left = 112
     Top = 160
   end
@@ -202,5 +204,138 @@ object ServerMethods2: TServerMethods2
     DataSet = ActiveOrderTable
     Left = 184
     Top = 160
+  end
+  object SPNewOrder: TFDStoredProc
+    Connection = PGTaxiConnection
+    StoredProcName = '"fnNewOrder"'
+    Left = 112
+    Top = 232
+    ParamData = <
+      item
+        Position = 1
+        Name = 'in_addres_from'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 2
+        Name = 'in_addres_to'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 3
+        Name = 'in_additional'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 4
+        Name = 'in_data_start'
+        DataType = ftDate
+        FDDataType = dtDate
+        ParamType = ptInput
+      end>
+  end
+  object SPDeleteOrder: TFDStoredProc
+    Connection = PGTaxiConnection
+    StoredProcName = '"fnDeleteOrder"'
+    Left = 144
+    Top = 232
+    ParamData = <
+      item
+        Position = 1
+        Name = 'in_id'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end>
+  end
+  object SPEditOrder: TFDStoredProc
+    Connection = PGTaxiConnection
+    StoredProcName = '"fnEditOrder"'
+    Left = 176
+    Top = 232
+    ParamData = <
+      item
+        Position = 1
+        Name = 'in_id'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end
+      item
+        Position = 2
+        Name = 'in_addres_from'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 3
+        Name = 'in_addres_to'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 4
+        Name = 'in_id_driver'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end
+      item
+        Position = 5
+        Name = 'in_order_status'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end
+      item
+        Position = 6
+        Name = 'in_additional'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 7
+        Name = 'in_order_start'
+        DataType = ftDate
+        FDDataType = dtDate
+        ParamType = ptInput
+      end
+      item
+        Position = 8
+        Name = 'in_order_finish'
+        DataType = ftDate
+        FDDataType = dtDate
+        ParamType = ptInput
+      end>
+  end
+  object SPChangeOrderStat: TFDStoredProc
+    Connection = PGTaxiConnection
+    StoredProcName = '"fnChangeOrderStatus"'
+    Left = 208
+    Top = 232
+    ParamData = <
+      item
+        Position = 1
+        Name = 'in_new_status'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end
+      item
+        Position = 2
+        Name = 'in_id_order'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end>
   end
 end

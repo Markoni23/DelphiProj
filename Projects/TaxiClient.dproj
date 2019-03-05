@@ -112,6 +112,10 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="ClientClassesUnit1.pas"/>
+        <DCCReference Include="EditOrder.pas">
+            <Form>EditOrderForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

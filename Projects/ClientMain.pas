@@ -32,6 +32,7 @@ type
     ActiveOrdersCDS: TClientDataSet;
     ActiveOrderDS: TDataSource;
     BindSourceDB3: TBindSourceDB;
+    bAddNewOrder: TButton;
     procedure AddDriverButtonClick(Sender: TObject);
     procedure bDelDriverClick(Sender: TObject);
     procedure bEditDriverClick(Sender: TObject);

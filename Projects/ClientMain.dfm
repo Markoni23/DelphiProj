@@ -37,6 +37,15 @@ object Form3: TForm3
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
       end
+      object bAddNewOrder: TButton
+        Left = 6
+        Top = 272
+        Width = 235
+        Height = 41
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1085#1086#1074#1099#1081' '#1079#1072#1082#1072#1079
+        Style = bsCommandLink
+        TabOrder = 1
+      end
     end
     object ArchivePage: TTabSheet
       Caption = #1040#1088#1093#1080#1074
