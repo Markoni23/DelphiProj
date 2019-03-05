@@ -11,6 +11,7 @@ object ServerMethods2: TServerMethods2
     Top = 120
   end
   object DriverTable: TFDQuery
+    DetailFields = 'ID;Login;First_Name;Second_Name;Third_Name;Car;Car_Sign;Phone'
     Connection = PGTaxiConnection
     SQL.Strings = (
       'select * from "Driver"')
@@ -182,9 +183,13 @@ object ServerMethods2: TServerMethods2
       end>
   end
   object ArchiveTable: TFDQuery
+    DetailFields = 'ID;AddressFrom;AddressTo;OrderDate;Additional;Login'
     Connection = PGTaxiConnection
     SQL.Strings = (
-      'select * from "Orders" where "Order_Status" = 5; ')
+      'select * from "Orders" '
+      'inner join "Driver" on'
+      '"Orders"."ID_Driver" ="Driver"."ID"'
+      'where "Order_Status" = 5; ')
     Left = 112
     Top = 104
   end
@@ -194,9 +199,15 @@ object ServerMethods2: TServerMethods2
     Top = 104
   end
   object ActiveOrderTable: TFDQuery
+    DetailFields = 'ID;AddressFrom;AddressTo;OrderDate;Additional;Status;Login'
     Connection = PGTaxiConnection
     SQL.Strings = (
-      'select * from "Orders" where "Order_Status" <> 5;')
+      'select * from "Orders" '
+      'inner join "Order_status" on'
+      '"Orders"."Order_Status" = "Order_status"."ID" '
+      'inner join "Driver" on'
+      '"Orders"."ID_Driver" ="Driver"."ID"'
+      ' where "Orders"."Order_Status" <> 5;')
     Left = 112
     Top = 160
   end
@@ -337,5 +348,10 @@ object ServerMethods2: TServerMethods2
         FDDataType = dtInt32
         ParamType = ptInput
       end>
+  end
+  object FDQuery1: TFDQuery
+    Connection = PGTaxiConnection
+    Left = 288
+    Top = 104
   end
 end

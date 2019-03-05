@@ -36,6 +36,7 @@ type
     procedure AddDriverButtonClick(Sender: TObject);
     procedure bDelDriverClick(Sender: TObject);
     procedure bEditDriverClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -117,6 +118,27 @@ begin
       DriverCDS.Refresh;
       end;
   end;
+
+end;
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+    DriverCDS.Active:=True;
+    ArchiveCDS.Active:=True;
+    ActiveOrdersCDS.Active:=True;
+
+    DriverGrid.Columns.Items[0].Width:=40;
+    DriverGrid.Columns.Items[1].DisplayName:='Логин';
+    DriverGrid.Columns.Items[1].Width:=100;
+    DriverGrid.Columns.Items[2].Visible := False;
+    DriverGrid.Columns.Items[3].Width:=100;
+    DriverGrid.Columns.Items[3].DisplayName:='фамилия';
+    DriverGrid.Columns.Items[4].Width:=100;
+    DriverGrid.Columns.Items[4].DisplayName:='Имя';
+    DriverGrid.Columns.Items[5].Width:=100;
+    DriverGrid.Columns.Items[5].DisplayName:='Отчество';
+
+
 
 end;
 

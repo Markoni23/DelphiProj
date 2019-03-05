@@ -11,6 +11,7 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object PageControl: TPageControl
@@ -18,7 +19,7 @@ object Form3: TForm3
     Top = 0
     Width = 771
     Height = 651
-    ActivePage = MainPage
+    ActivePage = DriverPage
     Align = alClient
     TabOrder = 0
     object MainPage: TTabSheet
@@ -50,8 +51,6 @@ object Form3: TForm3
     object ArchivePage: TTabSheet
       Caption = #1040#1088#1093#1080#1074
       ImageIndex = 1
-      ExplicitLeft = -44
-      ExplicitTop = 0
       object ArchiveGrid: TDBGrid
         Left = 0
         Top = 0
@@ -137,10 +136,9 @@ object Form3: TForm3
   end
   object DSProviderConnection1: TDSProviderConnection
     ServerClassName = 'TServerMethods2'
-    Connected = True
     SQLConnection = SQLConnection1
-    Left = 48
-    Top = 528
+    Left = 144
+    Top = 384
   end
   object SQLConnection1: TSQLConnection
     ConnectionName = 'DataSnapCONNECTION'
@@ -151,9 +149,8 @@ object Form3: TForm3
       'HostName=localhost'
       'port=211'
       'Filters={}')
-    Connected = True
-    Left = 8
-    Top = 536
+    Left = 16
+    Top = 464
     UniqueId = '{880E32C2-F102-48E5-A90C-ECD671970A40}'
   end
   object ArchiveCDS: TClientDataSet

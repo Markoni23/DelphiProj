@@ -28,6 +28,7 @@ type
     SPDeleteOrder: TFDStoredProc;
     SPEditOrder: TFDStoredProc;
     SPChangeOrderStat: TFDStoredProc;
+    FDQuery1: TFDQuery;
   private
     { Private declarations }
   public

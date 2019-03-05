@@ -67,7 +67,6 @@ begin
   ParamByName('Car_Sign').Value := Car_Sign;
   ExecProc;
   end;
-  DriverTable.Refresh();
 end;
 
 procedure TServerMethods2.DeleteDriver(Id: Integer);
