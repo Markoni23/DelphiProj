@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.897,C:\Users\admin\Documents\Embarcadero\Studio\Projects\ControlPanelServer.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.676,C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.628,C:\Users\admin\Documents\Embarcadero\Studio\Projects\ControlPanelServer.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.729,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.246,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\Server.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.106,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\Unit1.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.361,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.757,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ServerContainerUnit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.676,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ServerMethodsUnit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.701,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.135,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.106,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\Unit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.182,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.863,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit1.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.831,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.628,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ControlPanelServer.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.182,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.106,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.337,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.757,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ServerContainerUnit1.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.246,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\Server.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.863,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.135,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.701,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.757,C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ServerContainerUnit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.831,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.757,C:\Users\admin\Documents\Embarcadero\Studio\Projects\ServerContainerUnit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ServerContainerUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.246,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\Server.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.106,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.361,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerMethodsUnit.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.696,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ClientModuleUnit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.246,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\Server.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.863,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit1.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.673,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ClientClassesUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.897,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\ControlPanelServer.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.863,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\ControlPanelServer\ServerContainerUnit1.pas</Transaction>
   </Transactions>
 </BorlandProject>
