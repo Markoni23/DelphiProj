@@ -8,3 +8,18 @@ Coordinates=196,1,103,33
 Coordinates=76,10,66,51
 Visible=True
 
+[bLogin]
+Coordinates=215,123,48,51
+
+[Label2]
+Coordinates=215,53,46,51
+
+[ePassword]
+Coordinates=65,53,68,51
+
+[eLogin]
+Coordinates=16,70,48,51
+
+[Label1]
+Coordinates=0,0,46,51
+

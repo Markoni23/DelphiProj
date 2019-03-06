@@ -403,4 +403,46 @@ object ServerMethods2: TServerMethods2
     Left = 184
     Top = 8
   end
+  object SPAuthDriver: TFDStoredProc
+    Connection = PGTaxiConnection
+    StoredProcName = '"fnAuthDriver"'
+    Left = 232
+    Top = 296
+    ParamData = <
+      item
+        Position = 1
+        Name = 'in_login'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 2
+        Name = 'in_password'
+        DataType = ftWideString
+        FDDataType = dtWideString
+        ParamType = ptInput
+      end
+      item
+        Position = 3
+        Name = 'result'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptResult
+      end>
+  end
+  object SPDeAuthDriver: TFDStoredProc
+    Connection = PGTaxiConnection
+    StoredProcName = '"fnDeAuthDriver"'
+    Left = 272
+    Top = 296
+    ParamData = <
+      item
+        Position = 1
+        Name = 'in_id'
+        DataType = ftInteger
+        FDDataType = dtInt32
+        ParamType = ptInput
+      end>
+  end
 end

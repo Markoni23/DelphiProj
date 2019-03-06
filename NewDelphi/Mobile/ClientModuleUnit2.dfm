@@ -19,5 +19,6 @@ object ClientModule2: TClientModule2
     Connected = True
     Left = 48
     Top = 40
+    UniqueId = '{950CCF4D-0D9D-4E18-AFAC-8F3200F9E2F8}'
   end
 end

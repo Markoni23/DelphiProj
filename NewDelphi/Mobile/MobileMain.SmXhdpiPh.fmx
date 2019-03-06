@@ -2,12 +2,20 @@ inherited Form1_SmXhdpiPh: TForm1_SmXhdpiPh
   ClientHeight = 375
   ClientWidth = 250
   DesignerMasterStyle = 0
-  inherited ActiveList: TListBox
-    Viewport.Width = 393.000000000000000000
-    Viewport.Height = 337.000000000000000000
-    inherited IdList: TListBox
-      Viewport.Width = 17.000000000000000000
-      Viewport.Height = 17.000000000000000000
-    end
+  inherited Label1: TLabel
+    Size.Width = 250.000000000000000000
+  end
+  inherited eLogin: TEdit
+    Size.Width = 210.000000000000000000
+  end
+  inherited ePassword: TEdit
+    Size.Width = 210.000000000000000000
+  end
+  inherited Label2: TLabel
+    Size.Width = 250.000000000000000000
+  end
+  inherited bLogin: TButton
+    Position.Y = 295.000000000000000000
+    Size.Width = 250.000000000000000000
   end
 end

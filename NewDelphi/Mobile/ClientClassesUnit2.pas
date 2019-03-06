@@ -1,7 +1,7 @@
-// 
+//
 // Created by the DataSnap proxy generator.
-// 06.03.2019 15:28:08
-// 
+// 06.03.2019 19:37:34
+//
 
 unit ClientClassesUnit2;
 
@@ -22,6 +22,8 @@ type
     FEditOrderCommand: TDBXCommand;
     FChangeOrdeerStatCommand: TDBXCommand;
     FDriverToOrderCommand: TDBXCommand;
+    FAuthDriverCommand: TDBXCommand;
+    FDeAuthDriverCommand: TDBXCommand;
   public
     constructor Create(ADBXConnection: TDBXConnection); overload;
     constructor Create(ADBXConnection: TDBXConnection; AInstanceOwner: Boolean); overload;
@@ -36,6 +38,8 @@ type
     procedure EditOrder(in_id: Integer; in_driver_id: Integer; in_order_status: Integer; in_addres_from: string; in_addres_to: string; in_additional: string; in_order_start: TDateTime; in_order_finish: TDateTime);
     procedure ChangeOrdeerStat(in_new_stat: Integer; in_id_order: Integer);
     procedure DriverToOrder(in_driver_id: Integer; in_order_id: Integer);
+    function AuthDriver(in_login: string; in_password: string): Integer;
+    procedure DeAuthDriver(in_id: Integer);
   end;
 
 implementation
@@ -200,6 +204,34 @@ begin
   FDriverToOrderCommand.ExecuteUpdate;
 end;
 
+function TServerMethods2Client.AuthDriver(in_login: string; in_password: string): Integer;
+begin
+  if FAuthDriverCommand = nil then
+  begin
+    FAuthDriverCommand := FDBXConnection.CreateCommand;
+    FAuthDriverCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FAuthDriverCommand.Text := 'TServerMethods2.AuthDriver';
+    FAuthDriverCommand.Prepare;
+  end;
+  FAuthDriverCommand.Parameters[0].Value.SetWideString(in_login);
+  FAuthDriverCommand.Parameters[1].Value.SetWideString(in_password);
+  FAuthDriverCommand.ExecuteUpdate;
+  Result := FAuthDriverCommand.Parameters[2].Value.GetInt32;
+end;
+
+procedure TServerMethods2Client.DeAuthDriver(in_id: Integer);
+begin
+  if FDeAuthDriverCommand = nil then
+  begin
+    FDeAuthDriverCommand := FDBXConnection.CreateCommand;
+    FDeAuthDriverCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FDeAuthDriverCommand.Text := 'TServerMethods2.DeAuthDriver';
+    FDeAuthDriverCommand.Prepare;
+  end;
+  FDeAuthDriverCommand.Parameters[0].Value.SetInt32(in_id);
+  FDeAuthDriverCommand.ExecuteUpdate;
+end;
+
 constructor TServerMethods2Client.Create(ADBXConnection: TDBXConnection);
 begin
   inherited Create(ADBXConnection);
@@ -222,7 +254,10 @@ begin
   FEditOrderCommand.DisposeOf;
   FChangeOrdeerStatCommand.DisposeOf;
   FDriverToOrderCommand.DisposeOf;
+  FAuthDriverCommand.DisposeOf;
+  FDeAuthDriverCommand.DisposeOf;
   inherited;
 end;
 
 end.
+

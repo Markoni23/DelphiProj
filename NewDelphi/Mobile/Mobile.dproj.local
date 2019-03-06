@@ -1,17 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.574,=C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\ClientModuleUnit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.589,C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\MobileMain.pas=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.851,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Mobile.dproj=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.728,=C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\ClientClassesUnit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.526,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Mobile.dproj=C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\Mobile.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.589,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.pas=C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\MobileMain.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.401,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.fmx</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.851,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Mobile.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.401,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.589,C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\MobileMain.fmx=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.526,C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\Mobile.dproj=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Mobile.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.398,=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.589,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.fmx=C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\MobileMain.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.401,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.pas=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.401,C:\Users\ACER\Documents\Embarcadero\Studio\Projects\MobileMain.fmx=C:\Users\ACER\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.574,=C:\Users\ACER\Desktop\DelphiProj\NewDelphi\Mobile\ClientModuleUnit2.pas</Transaction>
+    <Transaction>2019.03.06 19:24:01.794,=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit1.pas</Transaction>
+    <Transaction>2019.03.06 19:24:29.588,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\ClientClassesUnit1.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit1.pas</Transaction>
+    <Transaction>2019.03.06 19:27:11.372,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\ClientClassesUnit2.pas=</Transaction>
+    <Transaction>2019.03.06 19:40:58.844,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\ClientClassesUnit2.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2019.03.06 20:07:22.403,=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2019.03.06 20:08:31.145,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\MobileIn.fmx=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit2.fmx</Transaction>
+    <Transaction>2019.03.06 20:08:31.145,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\MobileIn.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2019.03.06 22:13:13.776,=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit6.pas</Transaction>
+    <Transaction>2019.03.06 22:13:28.614,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\MobileOrder.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit6.pas</Transaction>
+    <Transaction>2019.03.06 22:13:28.614,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\MobileOrder.fmx=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit6.fmx</Transaction>
+    <Transaction>2019.03.06 22:51:52.460,=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit7.pas</Transaction>
+    <Transaction>2019.03.06 22:52:11.168,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\MobileOrderStat.fmx=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit7.fmx</Transaction>
+    <Transaction>2019.03.06 22:52:11.168,C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\MobileOrderStat.pas=C:\Users\mark\Desktop\delphiwork\delphi\Taxi\NewDelphi\Mobile\Unit7.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile Android="05157df5cdfa682a"/>
+		<NoProfile Android=""/>
 	</ActiveMobileDevice>
 </BorlandProject>

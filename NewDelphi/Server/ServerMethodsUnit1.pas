@@ -3,7 +3,7 @@ unit ServerMethodsUnit1;
 interface
 
 uses System.SysUtils, System.Classes, System.Json,
-    DataSnap.DSProviderDataModuleAdapter,
+    DataSnap.DSProviderDataModuleAdapter,Variants,
     Datasnap.DSServer, Datasnap.DSAuth, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.PG,
@@ -31,6 +31,8 @@ type
     FreeDriver: TFDQuery;
     SPDriverToOrder: TFDStoredProc;
     FreeDriverDSP: TDataSetProvider;
+    SPAuthDriver: TFDStoredProc;
+    SPDeAuthDriver: TFDStoredProc;
   private
     { Private declarations }
   public
@@ -50,6 +52,8 @@ type
                      in_order_start,in_order_finish : TDateTime);
     procedure ChangeOrdeerStat(in_new_stat,in_id_order:integer);
     procedure DriverToOrder(in_driver_id,in_order_id : integer);
+    function AuthDriver(in_login,in_password : string):integer;
+    procedure DeAuthDriver(in_id:integer);
   end;
 
 implementation
@@ -173,5 +177,39 @@ begin
     ExecProc;
   end;
 end;
+
+function IsEmptyOrNull(const Value: Variant): Boolean;
+begin
+  Result := VarIsClear(Value) or VarIsEmpty(Value) or VarIsNull(Value) or (VarCompareValue(Value, Unassigned) = vrEqual);
+  if (not Result) and VarIsStr(Value) then
+    Result := Value = '';
+end;
+
+
+function TServerMethods2.AuthDriver(in_login: string; in_password: string):integer;
+var res :Variant;
+begin
+  with SPAuthDriver do
+  begin
+    ParamByName('in_login').Value := in_login;
+    ParamByName('in_password').Value := in_password;
+    res := ExecFunc;
+    if IsEmptyOrNull(res) then
+      Result := -1
+    else
+      Result := res;
+  end;
+end;
+
+procedure TServerMethods2.DeAuthDriver(in_id: Integer);
+begin
+  with SPDeauthDriver do
+    begin
+      ParamByName('in_id').Value := in_id;
+      ExecProc;
+    end;
+end;
+
+
 end.
 

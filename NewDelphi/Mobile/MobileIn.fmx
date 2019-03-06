@@ -1,0 +1,149 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 454
+  ClientWidth = 505
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Position.X = 88.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 297.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    OnItemClick = ListView1ItemClick
+    object Label3: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 208.000000000000000000
+      Text = 'Label3'
+      Visible = False
+      TabOrder = 0
+    end
+  end
+  object NavigatorBindSourceDB1: TBindNavigator
+    Position.X = 240.000000000000000000
+    Position.Y = 264.000000000000000000
+    Size.Width = 241.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 6
+    DataSource = BindSourceDB1
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object Label1: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = '123213123'
+    TabOrder = 8
+  end
+  object Label2: TLabel
+    Position.X = 176.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = '123123123'
+    TabOrder = 9
+  end
+  object FDConnectionPGTaxi: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=PGTaxi')
+    Connected = True
+    LoginPrompt = False
+    Left = 168
+    Top = 416
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    Left = 224
+    Top = 408
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 296
+    Top = 400
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDQuery1
+    ScopeMappings = <>
+    Left = 360
+    Top = 400
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = FDConnectionPGTaxi
+    SQL.Strings = (
+      'select * from "Orders"')
+    Left = 80
+    Top = 400
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 36
+    Top = 397
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'Second_Name'
+      Component = Label1
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'First_Name'
+      Component = Label2
+      ComponentProperty = 'Text'
+    end
+    object LinkFillControlToPropertyText: TLinkFillControlToProperty
+      Category = 'Quick Bindings'
+      Track = True
+      Control = ListView1
+      Component = Label3
+      ComponentProperty = 'Text'
+      FillDataSource = BindSourceDB1
+      FillValueFieldName = 'ID'
+      FillDisplayFieldName = 'AddressFrom'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = FDQuery2
+    ScopeMappings = <>
+    Left = 448
+    Top = 176
+  end
+  object FDQuery2: TFDQuery
+    Connection = FDConnectionPGTaxi
+    SQL.Strings = (
+      
+        'select "ID","First_Name","Second_Name" from "Driver" where "ID" ' +
+        '= :this_id;')
+    Left = 432
+    Top = 112
+    ParamData = <
+      item
+        Name = 'THIS_ID'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+  end
+end

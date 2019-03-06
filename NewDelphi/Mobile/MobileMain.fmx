@@ -3,47 +3,65 @@ object Form1: TForm1
   Top = 0
   Caption = 'Form1'
   ClientHeight = 480
-  ClientWidth = 383
+  ClientWidth = 381
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
   DesignerMasterStyle = 0
-  object ActiveList: TListBox
-    Anchors = [akLeft, akRight, akBottom]
-    Position.X = -8.000000000000000000
-    Position.Y = 152.000000000000000000
-    Size.Width = 393.000000000000000000
-    Size.Height = 337.000000000000000000
+  object Label1: TLabel
+    Align = Horizontal
+    Position.Y = 88.000000000000000000
+    Size.Width = 381.000000000000000000
+    Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 2
-    DisableFocusEffect = True
-    DefaultItemStyles.ItemStyle = ''
-    DefaultItemStyles.GroupHeaderStyle = ''
-    DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 389.000000000000000000
-    Viewport.Height = 333.000000000000000000
-    object IdList: TListBox
-      Position.X = 80.000000000000000000
-      Position.Y = 72.000000000000000000
-      Size.Width = 17.000000000000000000
-      Size.Height = 17.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 0
-      Visible = False
-      DisableFocusEffect = True
-      DefaultItemStyles.ItemStyle = ''
-      DefaultItemStyles.GroupHeaderStyle = ''
-      DefaultItemStyles.GroupFooterStyle = ''
-      Viewport.Width = 13.000000000000000000
-      Viewport.Height = 13.000000000000000000
-    end
-    object Button1: TButton
-      Position.X = 168.000000000000000000
-      Position.Y = -136.000000000000000000
-      TabOrder = 1
-      Text = 'Button1'
-    end
+    TextSettings.HorzAlign = Center
+    Text = #1042#1074#1077#1076#1080#1090#1077' '#1051#1086#1075#1080#1085
+    TabOrder = 5
+  end
+  object eLogin: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Horizontal
+    TabOrder = 7
+    Position.X = 20.000000000000000000
+    Position.Y = 136.000000000000000000
+    Margins.Left = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Size.Width = 341.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ePassword: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Horizontal
+    TabOrder = 6
+    Position.X = 20.000000000000000000
+    Position.Y = 264.000000000000000000
+    Margins.Left = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Size.Width = 341.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label2: TLabel
+    Align = Horizontal
+    Position.Y = 216.000000000000000000
+    Size.Width = 381.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = #1042#1074#1077#1076#1080#1090#1077' '#1087#1072#1088#1086#1083#1100
+    TabOrder = 4
+  end
+  object bLogin: TButton
+    Align = Bottom
+    Position.Y = 400.000000000000000000
+    Size.Width = 381.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = #1042#1086#1081#1090#1080
+    OnClick = bLoginClick
   end
   object ServerConnection: TSQLConnection
     DriverName = 'DataSnap'
@@ -60,14 +78,14 @@ object Form1: TForm1
         'Token=91d62ebb5b0d1b1b'
       'Filters={}')
     Connected = True
-    Left = 64
-    Top = 56
+    Left = 24
+    Top = 24
   end
   object DSPConnection: TDSProviderConnection
     ServerClassName = 'TServerMethods2'
     Connected = True
     SQLConnection = ServerConnection
-    Left = 152
-    Top = 64
+    Left = 64
+    Top = 24
   end
 end
