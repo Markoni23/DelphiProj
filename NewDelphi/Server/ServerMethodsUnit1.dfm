@@ -14,8 +14,12 @@ object ServerMethods2: TServerMethods2
     DetailFields = 'ID;Login;First_Name;Second_Name;Third_Name;Car;Car_Sign;Phone'
     Connection = PGTaxiConnection
     SQL.Strings = (
-      'select "ID","Login","First_Name","Second_Name",'
-      '"Third_Name","Car","Car_Sign","Phone" from "Driver"')
+      'select d."ID","Login","First_Name","Second_Name",'
+      
+        '"Third_Name","Car","Car_Sign","Phone",ds."Status","Password",d."' +
+        'Driver_Status" from "Driver" d'
+      'inner join "Driver_status" ds on'
+      'ds."ID" = d."Driver_Status" ')
     Left = 112
     Top = 48
   end

@@ -179,6 +179,10 @@ begin
     DriverGrid.Columns.Items[5].Width:=100;
     DriverGrid.Columns.Items[6].Width:=100;
     DriverGrid.Columns.Items[7].Width:=100;
+    DriverGrid.Columns.Items[8].Width:=100;
+
+    DriverGrid.Columns.Items[9].Visible := False;
+    DriverGrid.Columns.Items[10].Visible := False;
 
     DriverGrid.Columns.Items[1].Title.Caption:='Логин';
     DriverGrid.Columns.Items[2].Title.Caption:='Фамилия';
@@ -187,6 +191,8 @@ begin
     DriverGrid.Columns.Items[5].Title.Caption:='Автомобиль';
     DriverGrid.Columns.Items[6].Title.Caption:='Гос.Номер';
     DriverGrid.Columns.Items[7].Title.Caption:='Тел.Номер';
+    DriverGrid.Columns.Items[8].Title.Caption:='Статус';
+
 
 
     ActiveDriverGrid.Columns.Items[0].Width:=50;

@@ -44,6 +44,24 @@ COMMENT ON EXTENSION adminpack IS 'administrative functions for PostgreSQL';
 
 
 --
+-- Name: fnAuthDriver(character varying, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public."fnAuthDriver"(in_login character varying, in_password character varying) RETURNS integer
+    LANGUAGE sql
+    AS $$update "Driver" 
+set "Driver_Status" = 2
+where 
+	in_login = "Login" and in_password = "Password";
+select "ID" from "Driver" 
+where
+	in_login = "Login" and in_password = "Password";
+$$;
+
+
+ALTER FUNCTION public."fnAuthDriver"(in_login character varying, in_password character varying) OWNER TO postgres;
+
+--
 -- Name: fnChangeOrderStatus(integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -55,6 +73,19 @@ where "ID" = in_id_order;$$;
 
 
 ALTER FUNCTION public."fnChangeOrderStatus"(in_new_status integer, in_id_order integer) OWNER TO postgres;
+
+--
+-- Name: fnDeAuthDriver(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public."fnDeAuthDriver"(in_id integer) RETURNS void
+    LANGUAGE sql
+    AS $$update "Driver"
+set "Driver_Status" = 1
+where "ID" = in_id;$$;
+
+
+ALTER FUNCTION public."fnDeAuthDriver"(in_id integer) OWNER TO postgres;
 
 --
 -- Name: fnDeleteOrder(integer); Type: FUNCTION; Schema: public; Owner: postgres
@@ -385,7 +416,7 @@ ALTER SEQUENCE public."Driver_status_ID_seq" OWNED BY public."Driver_status"."ID
 
 CREATE TABLE public."Order_status" (
     "ID" integer NOT NULL,
-    "Status" text NOT NULL
+    "Status" character varying(20) NOT NULL
 );
 
 
@@ -645,6 +676,7 @@ COPY public."Driver" ("ID", "Login", "Password", "First_Name", "Second_Name", "T
 2	выаыва	ываыва	Иванов	Иван	Иванович	Красная приора	234234234	23423	1
 11	Vasya	1111	Сидоров	Илья	Васильевич	Белая ауди	8 918 641 58 57	йц41	1
 3	йц	йц	Петров	Петр	Сергеевич	Белая приора	234234234	23423	3
+12	usup	usup	Ваникин	Иван	Юсупович	Черная Ауди	124124123213	1234	1
 \.
 
 
@@ -678,6 +710,7 @@ COPY public."Order_status" ("ID", "Status") FROM stdin;
 
 COPY public."Orders" ("ID", "AddressFrom", "AddressTo", "ID_Driver", "Order_Status", "Additional", "OrderDate", "OrderFinish") FROM stdin;
 2	йцу	йцу	3	2	йцу	2019-03-06	\N
+4	Яна полуяна 43	Димитрова 15	\N	1	Можно курить	2019-03-06	\N
 \.
 
 
@@ -749,7 +782,7 @@ COPY public."tRideStatus" (id, name) FROM stdin;
 -- Name: Driver_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Driver_ID_seq"', 11, true);
+SELECT pg_catalog.setval('public."Driver_ID_seq"', 12, true);
 
 
 --
@@ -770,7 +803,7 @@ SELECT pg_catalog.setval('public."Order_status_ID_seq"', 5, true);
 -- Name: Orders_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Orders_ID_seq"', 3, true);
+SELECT pg_catalog.setval('public."Orders_ID_seq"', 4, true);
 
 
 --

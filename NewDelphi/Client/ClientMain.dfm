@@ -20,14 +20,11 @@ object Form3: TForm3
     Top = 0
     Width = 814
     Height = 651
-    ActivePage = ArchivePage
+    ActivePage = DriverPage
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 771
     object MainPage: TTabSheet
       Caption = #1040#1082#1090#1080#1074#1085#1099#1077' '#1079#1072#1082#1072#1079#1099
-      ExplicitLeft = 8
-      ExplicitTop = -32
       DesignSize = (
         806
         623)
@@ -94,7 +91,6 @@ object Form3: TForm3
     object ArchivePage: TTabSheet
       Caption = #1040#1088#1093#1080#1074
       ImageIndex = 1
-      ExplicitWidth = 763
       object ArchiveGrid: TDBGrid
         Left = 0
         Top = 0
@@ -113,7 +109,6 @@ object Form3: TForm3
     object DriverPage: TTabSheet
       Caption = #1042#1086#1076#1080#1090#1077#1083#1080
       ImageIndex = 2
-      ExplicitWidth = 763
       object DriverGrid: TDBGrid
         Left = 0
         Top = 0
