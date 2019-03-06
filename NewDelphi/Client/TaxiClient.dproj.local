@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.861,C:\Users\ACER\Desktop\NewDelphi\Client\EditDriver.dfm=C:\Users\ACER\Desktop\DelphiProj\Projects\EditDriver.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.552,C:\Users\ACER\Desktop\NewDelphi\Client\EditOrder.pas=C:\Users\ACER\Desktop\DelphiProj\NewTaxiProject\Client\EditOrder.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.082,C:\Users\ACER\Desktop\NewDelphi\Client\TaxiClient.dproj=C:\Users\ACER\Desktop\DelphiProj\Projects\TaxiClient.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.638,C:\Users\ACER\Desktop\NewDelphi\Client\ClientClassesUnit1.pas=C:\Users\ACER\Desktop\DelphiProj\Projects\ClientClassesUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.778,C:\Users\ACER\Desktop\NewDelphi\Client\ClientMain.dfm=C:\Users\ACER\Desktop\DelphiProj\Projects\ClientMain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.778,C:\Users\ACER\Desktop\NewDelphi\Client\ClientMain.pas=C:\Users\ACER\Desktop\DelphiProj\Projects\ClientMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.039,C:\Users\ACER\Desktop\NewDelphi\Client\ClientModuleUnit1.dfm=C:\Users\ACER\Desktop\DelphiProj\Projects\ClientModuleUnit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.861,C:\Users\ACER\Desktop\NewDelphi\Client\EditDriver.pas=C:\Users\ACER\Desktop\DelphiProj\Projects\EditDriver.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.552,C:\Users\ACER\Desktop\NewDelphi\Client\EditOrder.dfm=C:\Users\ACER\Desktop\DelphiProj\NewTaxiProject\Client\EditOrder.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.039,C:\Users\ACER\Desktop\NewDelphi\Client\ClientModuleUnit1.pas=C:\Users\ACER\Desktop\DelphiProj\Projects\ClientModuleUnit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

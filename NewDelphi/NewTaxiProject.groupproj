@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FBAE4433-B739-4830-9DF0-385080962F21}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Client\TaxiClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Server\TaxiServer1.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TaxiClient">
+        <MSBuild Projects="Client\TaxiClient.dproj"/>
+    </Target>
+    <Target Name="TaxiClient:Clean">
+        <MSBuild Projects="Client\TaxiClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TaxiClient:Make">
+        <MSBuild Projects="Client\TaxiClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TaxiServer1">
+        <MSBuild Projects="Server\TaxiServer1.dproj"/>
+    </Target>
+    <Target Name="TaxiServer1:Clean">
+        <MSBuild Projects="Server\TaxiServer1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TaxiServer1:Make">
+        <MSBuild Projects="Server\TaxiServer1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TaxiClient;TaxiServer1"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TaxiClient:Clean;TaxiServer1:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TaxiClient:Make;TaxiServer1:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
