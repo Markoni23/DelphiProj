@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.030,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\MobileApp.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\MobileApp.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.058,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\LoginForm.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\MobileApp.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.327,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\LoginForm.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.435,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\MAIN.fmx=C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.fmx</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.435,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\MAIN.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.399,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.977,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\Unit5.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\admin\Documents\Embarcadero\Studio\Projects\MobileApp.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.058,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\LoginForm.fmx=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\Unit5.fmx</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.948,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\ClientClassesUnit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.225,C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.162,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\ClientModuleUnit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.225,C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.fmx=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit4.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.225,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit4.fmx=C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.225,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.399,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.435,C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\MAIN.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.435,C:\Users\admin\Documents\Embarcadero\Studio\Projects\MAIN.fmx=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\MAIN.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.030,C:\Users\admin\Documents\Embarcadero\Studio\Projects\MobileApp.dproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\MobileApp.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.948,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\ClientClassesUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.977,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.058,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\Unit5.pas=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\LoginForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.058,C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\Unit5.fmx=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Taxi\MobileApp\LoginForm.fmx</Transaction>
   </Transactions>
 	<BT_BuildType>AppStore</BT_BuildType>
 	<ActiveMobileDevice>

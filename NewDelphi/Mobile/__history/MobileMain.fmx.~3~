@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ServerConnection: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'HostName=localhost'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'Filters={}')
+    Connected = True
+    Left = 64
+    Top = 56
+  end
+  object DSPConnection: TDSProviderConnection
+    ServerClassName = 'TServerMethods2'
+    Connected = True
+    SQLConnection = ServerConnection
+    Left = 152
+    Top = 64
+  end
+  object DSPActive: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ActiveOrderDSP'
+    RemoteServer = DSPConnection
+    Left = 264
+    Top = 64
+  end
+  object DSActive: TDataSource
+    Left = 352
+    Top = 136
+  end
+end

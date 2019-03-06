@@ -1,0 +1,72 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 383
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ActiveList: TListBox
+    Anchors = [akLeft, akRight, akBottom]
+    Position.X = -8.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 393.000000000000000000
+    Size.Height = 337.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 389.000000000000000000
+    Viewport.Height = 333.000000000000000000
+    object IdList: TListBox
+      Position.X = 80.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 17.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Visible = False
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 13.000000000000000000
+      Viewport.Height = 13.000000000000000000
+    end
+    object Button1: TButton
+      Position.X = 168.000000000000000000
+      Position.Y = -136.000000000000000000
+      TabOrder = 1
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+  end
+  object ServerConnection: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'HostName=localhost'
+      'DriverUnit=Data.DBXDataSnap'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'Filters={}')
+    Left = 64
+    Top = 56
+  end
+  object DSPConnection: TDSProviderConnection
+    ServerClassName = 'TServerMethods2'
+    SQLConnection = ServerConnection
+    Left = 152
+    Top = 64
+  end
+end

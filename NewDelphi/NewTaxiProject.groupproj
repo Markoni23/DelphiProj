@@ -9,6 +9,9 @@
         <Projects Include="Server\TaxiServer1.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Mobile\Mobile.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="TaxiServer1:Make">
         <MSBuild Projects="Server\TaxiServer1.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Mobile">
+        <MSBuild Projects="Mobile\Mobile.dproj"/>
+    </Target>
+    <Target Name="Mobile:Clean">
+        <MSBuild Projects="Mobile\Mobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Mobile:Make">
+        <MSBuild Projects="Mobile\Mobile.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="TaxiClient;TaxiServer1"/>
+        <CallTarget Targets="TaxiClient;TaxiServer1;Mobile"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="TaxiClient:Clean;TaxiServer1:Clean"/>
+        <CallTarget Targets="TaxiClient:Clean;TaxiServer1:Clean;Mobile:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="TaxiClient:Make;TaxiServer1:Make"/>
+        <CallTarget Targets="TaxiClient:Make;TaxiServer1:Make;Mobile:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
